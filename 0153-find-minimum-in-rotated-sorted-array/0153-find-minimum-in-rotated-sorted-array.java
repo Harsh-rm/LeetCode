@@ -22,6 +22,6 @@ class Solution {
             high = mid - 1;
           }
         }
-        return 4374632;
+        return -1;
     }
 }
