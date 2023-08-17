@@ -3,23 +3,24 @@ class Solution {
         if (arr == null || arr.length == 0 || k == 0) return new ArrayList<>();
 
         int n = arr.length;
-        int left = 0;
-        int right = n - 1;
+        int low = 0;
+        int high = n - k;
         List<Integer> result = new ArrayList<>();
 
-        while (k < (right - left + 1)) {
+        while (low < high) {
+            int mid = low + (high - low) / 2;
 
-            int distanceLeft = x - arr[left];
-            int distanceRight = arr[right] - x;
+            int distStart = x - arr[mid];
+            int distEnd = arr[mid + k] - x;
 
-            if (distanceLeft <= distanceRight) {
-                right--;
+            if (distStart > distEnd) {
+                low = mid + 1;
             } else {
-                left++;
+                high = mid;
             }
         }
 
-        for (int i = left; i <= right; i++) {
+        for (int i = low; i < low + k; i++) {
             result.add(arr[i]);
         }
 
