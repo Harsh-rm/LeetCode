@@ -4,7 +4,6 @@ class Solution {
 
         int n = nums.length;
         Map<Integer, Integer> numsMap = new HashMap<>();
-        int[] result;
 
         for(int i = 0; i < n; i++) {
             numsMap.put(nums[i], i);
