@@ -13,8 +13,7 @@ class Solution {
         if (head == null) return null;
         if (head.next == null) return head;
 
-        ListNode slow = new ListNode();
-        slow = null;
+        ListNode slow = null;
         ListNode curr = head;
         ListNode fast = head.next;
 
@@ -25,6 +24,7 @@ class Solution {
             fast = fast.next;
         }
         curr.next = slow;
+        
         return curr;
     }
 }
