@@ -17,7 +17,7 @@ class Solution {
     
     }
 
-    private void swapGreaterThanOnce(int[] nums, int k) {
+    private static void swapGreaterThanOnce(int[] nums, int k) {
         for (int i = (nums.length - 1); i >= 0; i--) {
             if(nums[k] < nums[i]) {
                 int temp = nums[k];
@@ -29,7 +29,7 @@ class Solution {
     }
 
     // Custom insertion sort method
-    public static void manualSort(int[] arr, int startIndex) {
+    private static void manualSort(int[] arr, int startIndex) {
         for (int i = startIndex; i < arr.length; i++) {
             int current = arr[i];
             int j = i - 1;
