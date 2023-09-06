@@ -23,13 +23,18 @@ class Solution {
         for(int i = index; i < num.length(); i++) {
             // handles expressions with preceding 0s i.e "01" => parseLong = 1
             if (index != i && num.charAt(index) == '0') continue;
+
             //start from index 0 until index i for the substring
             long curr =  Long.parseLong(num.substring(index, i + 1)); //captures substring until ith position
             // capture a null path "" and start from the curr value of the substring
             // i.e ("" + 1) , ("" + 12) , ("" + 123)
-            if (index == 0) { // to avoid adding operators in the beginning
+
+            // to avoid adding operators in the beginning
+            if (index == 0) { 
                 helper(num, target, i + 1, path + curr, curr, curr);
-            } else { // start adding operators in between the expression
+            } 
+            // start adding operators in between the expression
+            else { 
                 // + operator case
                 helper(num, target, i + 1, path + "+" + curr, calc + curr, +curr);
                 // - operator case
