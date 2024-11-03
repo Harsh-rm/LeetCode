@@ -6,6 +6,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 ## Array
 |  |
 | ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0039-combination-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0039-combination-sum) |
 ## Backtracking
 |  |
@@ -39,4 +40,8 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/Harsh-rm/LeetCode/tree/master/0023-merge-k-sorted-lists) |
+## Binary Search
+|  |
+| ------- |
+| [0033-search-in-rotated-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0033-search-in-rotated-sorted-array) |
 <!---LeetCode Topics End-->
