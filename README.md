@@ -9,6 +9,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0033-search-in-rotated-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0039-combination-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0039-combination-sum) |
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
+| [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 ## Backtracking
 |  |
 | ------- |
@@ -50,4 +51,12 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
+## Sorting
+|  |
+| ------- |
+| [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
+## Counting Sort
+|  |
+| ------- |
+| [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 <!---LeetCode Topics End-->
