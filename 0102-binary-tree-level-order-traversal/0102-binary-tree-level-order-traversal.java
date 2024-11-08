@@ -19,22 +19,28 @@ class Solution {
         result = new ArrayList<>();
         if (root == null) return result;
 
-        //DFS Based solution
-        dfs(root, 0);
+        //BFS based solution
+        Queue<TreeNode> q = new LinkedList<>();
+        q.add(root);
 
-        return result;
-    }
+        while(!q.isEmpty()) {
+            int size = q.size();
+            List<Integer> list = new ArrayList<>();
+             
+            for (int i = 0; i < size; i++) {
+                TreeNode curr = q.poll();
+                list.add(curr.val);
+                if (curr.left != null) {
+                    q.add(curr.left);
+                }
+                if (curr.right != null) {
+                    q.add(curr.right);
+                }
+            }
 
-    private void dfs(TreeNode root, int level) {
-        //Base
-        if (root == null) return;
-        //Logic
-        if (result.size() == level) {
-            result.add(new ArrayList<>());
+            result.add(list);
         }
-        result.get(level).add(root.val);
 
-        dfs(root.left, level + 1);
-        dfs(root.right, level + 1);
-    }
+        return result;        
+    } 
 }
