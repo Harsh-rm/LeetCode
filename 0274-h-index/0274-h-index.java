@@ -12,6 +12,7 @@ class Solution {
                 nums[citations[i]]++;
             }
         }
+        
         int rsum = 0;
 
         for (int i = n; i >= 0; i--) {
@@ -21,6 +22,6 @@ class Solution {
             }            
         }
 
-        return rsum;
+        return 0;
     }
 }
