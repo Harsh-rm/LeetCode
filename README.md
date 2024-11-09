@@ -8,6 +8,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0033-search-in-rotated-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0039-combination-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0039-combination-sum) |
+| [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0088-merge-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0088-merge-sorted-array) |
@@ -68,6 +69,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 ## Two Pointers
 |  |
 | ------- |
+| [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0088-merge-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0088-merge-sorted-array) |
 ## Tree
@@ -98,4 +100,16 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0101-symmetric-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0101-symmetric-tree) |
 | [0102-binary-tree-level-order-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0102-binary-tree-level-order-traversal) |
+## Dynamic Programming
+|  |
+| ------- |
+| [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
+## Stack
+|  |
+| ------- |
+| [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
+## Monotonic Stack
+|  |
+| ------- |
+| [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
 <!---LeetCode Topics End-->
