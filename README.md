@@ -36,6 +36,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/Harsh-rm/LeetCode/tree/master/0023-merge-k-sorted-lists) |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 ## Divide and Conquer
 |  |
 | ------- |
@@ -81,12 +82,14 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0102-binary-tree-level-order-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0102-binary-tree-level-order-traversal) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0113-path-sum-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0113-path-sum-ii) |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 ## Depth-First Search
 |  |
 | ------- |
 | [0098-validate-binary-search-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0098-validate-binary-search-tree) |
 | [0101-symmetric-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0101-symmetric-tree) |
 | [0113-path-sum-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0113-path-sum-ii) |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 ## Binary Search Tree
 |  |
 | ------- |
@@ -99,6 +102,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0102-binary-tree-level-order-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0102-binary-tree-level-order-traversal) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0113-path-sum-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0113-path-sum-ii) |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 ## Breadth-First Search
 |  |
 | ------- |
@@ -112,6 +116,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
+| [0114-flatten-binary-tree-to-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 ## Monotonic Stack
 |  |
 | ------- |
