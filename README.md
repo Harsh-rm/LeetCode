@@ -7,6 +7,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/Harsh-rm/LeetCode/tree/master/0011-container-with-most-water) |
+| [0015-3sum](https://github.com/Harsh-rm/LeetCode/tree/master/0015-3sum) |
 | [0033-search-in-rotated-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0039-combination-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0039-combination-sum) |
 | [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
@@ -66,6 +67,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 ## Sorting
 |  |
 | ------- |
+| [0015-3sum](https://github.com/Harsh-rm/LeetCode/tree/master/0015-3sum) |
 | [0088-merge-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 ## Counting Sort
@@ -76,6 +78,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0011-container-with-most-water](https://github.com/Harsh-rm/LeetCode/tree/master/0011-container-with-most-water) |
+| [0015-3sum](https://github.com/Harsh-rm/LeetCode/tree/master/0015-3sum) |
 | [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0088-merge-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0088-merge-sorted-array) |
