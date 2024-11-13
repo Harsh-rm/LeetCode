@@ -17,26 +17,21 @@ class Solution {
     public int sumNumbers(TreeNode root) {
         if (root == null) return 0;
 
-        int sum = 0;
-        Stack<TreeNode> s = new Stack<>();
-        Stack<Integer> numberStack = new Stack<>();
-        int tempNumber = 0;
+        return dfs(root, 0);
+    }
 
-        while(root != null || !s.isEmpty()){
-            while(root != null) {
-                s.push(root);
-                tempNumber = tempNumber * 10 + root.val;
-                numberStack.push(tempNumber);
-                root = root.left;
-            }
-            root = s.pop();
-            tempNumber = numberStack.pop();
-            if (root.left == null && root.right == null) {
-                sum = sum + tempNumber;
-            }
-            root = root.right;
+    private int dfs(TreeNode root, int num) {
+        //base
+        if (root == null) return 0;
+        //logic        
+        int case1 = dfs(root.left, num * 10 + root.val);
+        int case2 = dfs(root.right, num * 10 + root.val);
+
+        //check if root is leaf node - Post-order
+        if (root.left == null && root.right == null) {
+            return num * 10 + root.val;
         }
-        
-        return sum;    
+
+        return case1 + case2;
     }
 }
