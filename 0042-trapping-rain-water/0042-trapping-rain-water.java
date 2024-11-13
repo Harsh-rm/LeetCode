@@ -3,7 +3,7 @@ class Solution {
         if (height == null || height.length < 2) return 0;
 
         int left = 0, right = height.length - 1;
-        int lh = 0, rh = 0;
+        int lh = height[left], rh = height[right];
         int result = 0;
 
         while (left <= right) {
