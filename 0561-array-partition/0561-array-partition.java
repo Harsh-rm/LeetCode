@@ -1,14 +1,16 @@
 class Solution {
     public int arrayPairSum(int[] nums) {
-        if (nums == null || nums.length == 0) return 0;
+        int sum = 0;
+        int n = nums.length;
 
+        if (nums == null || n == 0) return sum;
+               
         Arrays.sort(nums);
-        int result = 0;
 
-        for(int i = 0; i < nums.length; i = i+2) {
-            result += nums[i];
+        for (int i = n - 2; i >= 0; i = i - 2) {
+            sum += nums[i];
         }
 
-        return result;
+        return sum;
     }
 }
