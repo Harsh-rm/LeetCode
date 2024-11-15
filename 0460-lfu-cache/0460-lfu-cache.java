@@ -1,17 +1,17 @@
 class LFUCache {
 
-    class Node {
+    public class Node {
         int key, value, frequency;
         Node next, prev;
-        
+
         public Node(int key, int value) {
             this.key = key;
             this.value = value;
-            this.frequency = 1;  
-        }        
+            this.frequency = 1;
+        }
     }
 
-    class DLList {
+    public class DLList {
         Node head, tail;
         int size;
 
@@ -22,25 +22,21 @@ class LFUCache {
             tail.prev = head;
         }
 
-        private void addToHead(Node node) {
+        public void addToHead(Node node) {
             node.next = head.next;
             node.prev = head;
             head.next.prev = node;
             head.next = node;
-
             size++;
         }
 
-        private void removeNode(Node node) {
+        public void removeNode(Node node) {
             node.next.prev = node.prev;
             node.prev.next = node.next;
-            //node.next = null;
-            //node.prev = null;
-
             size--;
         }
 
-        private Node removeLastNode() {
+        public Node removeLastNode() {
             Node lastNode = tail.prev;
             removeNode(lastNode);
 
@@ -50,65 +46,66 @@ class LFUCache {
 
     int capacity, min;
     HashMap<Integer, Node> keyMap;
-    HashMap<Integer, DLList> frequencyMap;    
-    
+    HashMap<Integer, DLList> frequencyMap;
+
     public LFUCache(int capacity) {
         this.capacity = capacity;
-        min = 1;
+        this.min = 1;
         keyMap = new HashMap<>();
-        frequencyMap = new HashMap<>();        
+        frequencyMap = new HashMap<>();
     }
     
     public int get(int key) {
-        if(!keyMap.containsKey(key)) return -1;
+        if (!keyMap.containsKey(key)) return -1;
+        
+        Node oldNode = keyMap.get(key);
 
-        Node node = keyMap.get(key);
+        updateFrequency(oldNode);
 
-        update(node);
-
-        return node.value;
+        return oldNode.value;
     }
     
     public void put(int key, int value) {
         if (capacity == 0) return;
 
         if (keyMap.containsKey(key)) {
-            Node node = keyMap.get(key);
-            update(node);
-            node.value = value;
-            return;
+            Node oldNode = keyMap.get(key);
+            updateFrequency(oldNode);
+            oldNode.value = value;
+            return;         
         }
 
-        if (keyMap.size() == capacity) {
-            DLList oldlist =  frequencyMap.get(min);
-            Node lastNode = oldlist.removeLastNode();
-            keyMap.remove(lastNode.key);
+        if (capacity == keyMap.size()) {
+            DLList oldList = frequencyMap.get(min);
+            Node oldNode = oldList.removeLastNode();
+            keyMap.remove(oldNode.key);
         }
 
-        Node node = new Node(key, value);
         min = 1;
-        DLList newlist = frequencyMap.getOrDefault(min, new DLList());
-        newlist.addToHead(node);
-        frequencyMap.put(min, newlist);
-        keyMap.put(key, node);    
+        Node newNode = new Node(key, value);            
+        keyMap.put(key, newNode);            
+        DLList newList = frequencyMap.getOrDefault(min, new DLList());
+        newList.addToHead(newNode);
+        frequencyMap.put(min, newList);
     }
 
-    private void update(Node node) {
-        //Get the DLList associated with this node's frequency
-        DLList oldlist = frequencyMap.get(node.frequency);
-        //Remove the node from the DLList
-        oldlist.removeNode(node);
-        if(min == node.frequency && oldlist.size == 0) {
+    public void updateFrequency(Node node) {
+        //Retrieve the DLList where the node is present
+        DLList oldList = frequencyMap.get(node.frequency);
+        //Remove this node from the current DLList (which is mapped to the old frequency)
+        oldList.removeNode(node);
+        //Check if the frequency key is the min and the size of the oldList has reduced to 0 (in order to maintain the min value)
+        if (min == node.frequency && oldList.size == 0) {
             min++;
         }
-        //Increase the frequency of the node
+        //Increase the frequency of the node and add it to the new frequency key in the map
         node.frequency++;
-        //Update the frequencyMap with the updated frequency key
-        DLList newlist = frequencyMap.getOrDefault(node.frequency, new DLList());
-        //Add the the node to the updated frequency key's list
-        newlist.addToHead(node);
-        //Add the newlist to update the frequencyMap
-        frequencyMap.put(node.frequency, newlist);
+        //Retrieve the new frequency key's DLList or create one if not present
+        DLList newList = frequencyMap.getOrDefault(node.frequency, new DLList());
+        //Add the removed node from the previous frequency key to the Head of the DLList
+        newList.addToHead(node);
+        //Add this list back to the updated frequency key
+        frequencyMap.put(node.frequency, newList);
     }
 }
 
