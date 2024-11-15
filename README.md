@@ -18,6 +18,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0189-rotate-array](https://github.com/Harsh-rm/LeetCode/tree/master/0189-rotate-array) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
+| [0561-array-partition](https://github.com/Harsh-rm/LeetCode/tree/master/0561-array-partition) |
 ## Backtracking
 |  |
 | ------- |
@@ -73,10 +74,12 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0015-3sum](https://github.com/Harsh-rm/LeetCode/tree/master/0015-3sum) |
 | [0088-merge-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
+| [0561-array-partition](https://github.com/Harsh-rm/LeetCode/tree/master/0561-array-partition) |
 ## Counting Sort
 |  |
 | ------- |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
+| [0561-array-partition](https://github.com/Harsh-rm/LeetCode/tree/master/0561-array-partition) |
 ## Two Pointers
 |  |
 | ------- |
@@ -143,6 +146,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0011-container-with-most-water](https://github.com/Harsh-rm/LeetCode/tree/master/0011-container-with-most-water) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
+| [0561-array-partition](https://github.com/Harsh-rm/LeetCode/tree/master/0561-array-partition) |
 ## Math
 |  |
 | ------- |
