@@ -1,47 +1,40 @@
 class Solution {
     public void nextPermutation(int[] nums) {
-        if (nums == null || nums.length == 0) return;
+        if (nums == null || nums.length <= 1) return;
 
         int n = nums.length;
         int index = -1;
 
-        for (int i = (n - 2); i >= 0; i--) {
-            if (nums[i] < nums[i+1]) {
-                swapGreaterThanOnce(nums, i);
+        for (int i = n - 2; i >= 0; i--) {
+            if (nums[i] < nums[i + 1]) {
                 index = i;
                 break;
             }
         }
 
-        manualSort(nums, index+1);
-    
-    }
-
-    private static void swapGreaterThanOnce(int[] nums, int k) {
-        for (int i = (nums.length - 1); i >= 0; i--) {
-            if(nums[k] < nums[i]) {
-                int temp = nums[k];
-                nums[k] = nums[i];
-                nums[i] = temp;
-                break;
+        if (index != -1) {
+            for (int i = n - 1; i > index; i--) {
+                if (nums[index] < nums[i]) {
+                    swap(nums, index, i);
+                    break;
+                }
             }
         }
+
+        reverse(nums, index + 1, n -1);
     }
 
-    // Custom insertion sort method
-    private static void manualSort(int[] arr, int startIndex) {
-        for (int i = startIndex; i < arr.length; i++) {
-            int current = arr[i];
-            int j = i - 1;
+    private void swap(int[] nums, int l, int r) {
+        int temp = nums[l];
+        nums[l] = nums[r];
+        nums[r] = temp;
+    }
 
-            // Move elements that are greater than current to the right
-            while (j >= startIndex && arr[j] > current) {
-                arr[j + 1] = arr[j];
-                j--;
-            }
-
-            // Insert current element in the correct position
-            arr[j + 1] = current;
+    private void reverse(int[] nums, int l, int r) {
+        while (l <= r) {
+            swap(nums, l, r);
+            l++;
+            r--;
         }
     }
 }
