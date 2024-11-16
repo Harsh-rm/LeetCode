@@ -5,7 +5,7 @@ class Solution {
         if (pattern.length() != strArray.length) return false;
 
         HashMap<Character, String> charToStringMap = new HashMap<>();
-        HashMap<String, Character> stringToCharMap = new HashMap<>();
+        HashSet<String> stringMappedTochar = new HashSet<>();
 
         for (int i = 0; i < pattern.length(); i++) {
             String str = strArray[i];
@@ -17,15 +17,16 @@ class Solution {
                 }
             } else {
                 charToStringMap.put(c, str);
-            }
 
-            if (stringToCharMap.containsKey(str)) {
-                if (c != stringToCharMap.get(str)) {
+                if(!stringMappedTochar.contains(str)) {
+                    stringMappedTochar.add(str);
+                } else {
                     return false;
                 }
-            } else {
-                stringToCharMap.put(str, c);
+                
             }
+
+
         }
 
         return true;
