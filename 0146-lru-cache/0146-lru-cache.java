@@ -9,7 +9,7 @@ class LRUCache {
     }
     
     Node head, tail;
-    HashMap<Integer, Node> map = new HashMap<>();
+    HashMap<Integer, Node> map = new HashMap<Integer, Node>();
     int capacity;
     
     private void removeNode(Node node) {
