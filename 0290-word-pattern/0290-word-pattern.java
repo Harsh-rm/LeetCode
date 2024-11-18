@@ -1,4 +1,5 @@
 class Solution {
+
     public boolean wordPattern(String pattern, String s) {
         String[] strArray = s.split(" ");
 
@@ -11,11 +12,7 @@ class Solution {
             String str = strArray[i];
             char c = pattern.charAt(i);
 
-            if (charToStringMap.containsKey(c)) {
-                if (!str.equals(charToStringMap.get(c))) {
-                    return false;
-                }
-            } else {
+            if (!charToStringMap.containsKey(c)) {
                 charToStringMap.put(c, str);
 
                 if(!stringMappedTochar.contains(str)) {
@@ -23,12 +20,14 @@ class Solution {
                 } else {
                     return false;
                 }
-                
+            } else {
+                if (!str.equals(charToStringMap.get(c))) {
+                    return false;
+                }                
             }
-
-
         }
 
         return true;
     }
+
 }
