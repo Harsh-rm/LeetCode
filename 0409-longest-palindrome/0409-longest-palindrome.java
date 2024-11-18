@@ -15,10 +15,11 @@ class Solution {
                 setChecksPairs.add(c);
             }
         }
-        
+
         if (setChecksPairs.size() > 0) {
             longestResult += 1;
         }
+        
         return longestResult;
     }
 }
