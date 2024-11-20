@@ -1,25 +1,26 @@
 class Solution {
 
-    class TrieNode {
+    public class TrieNode {
         TrieNode[] children;
         boolean isEnd;
 
         public TrieNode() {
-            children = new TrieNode[26];            
+            children = new TrieNode[26];        
         }
 
-        private void insert (String word) {
+        public void insert(String word) {
             TrieNode curr = root;
 
             for (int i = 0; i < word.length(); i++) {
                 char c = word.charAt(i);
-                
+
                 if (curr.children[c - 'a'] == null) {
                     curr.children[c - 'a'] = new TrieNode();
                 }
 
                 curr = curr.children[c - 'a'];
             }
+
             curr.isEnd = true;
         }
     }
@@ -28,30 +29,29 @@ class Solution {
 
     public String replaceWords(List<String> dictionary, String sentence) {
         root = new TrieNode();
-        if (dictionary == null || dictionary.size() == 0) return sentence;
+        if (dictionary == null || dictionary.size() == 0 || sentence.length() == 0) return sentence;
 
-        for (String word : dictionary) {
+        for (String word: dictionary) {
             root.insert(word);
         }
 
-        String[] strArray = sentence.split(" ");
-        
-        StringBuilder resultantSb = new StringBuilder();
+        StringBuilder resultantSentence = new StringBuilder();
+        String[] sentenceAsArray = sentence.split(" ");        
 
-        for (int i = 0; i < strArray.length; i++) {
-            String word = strArray[i];
-            StringBuilder currSb = new StringBuilder();
+        for (int i = 0; i < sentenceAsArray.length; i++) {
+            String word = sentenceAsArray[i];
+            StringBuilder currWord = new StringBuilder();
             TrieNode curr = root;
 
             for (int j = 0; j < word.length(); j++) {
                 char c = word.charAt(j);
 
-                if (curr.children[c - 'a'] != null) {
+                if (curr.children[c - 'a'] != null) {                    
                     curr = curr.children[c - 'a'];
-                    currSb.append(c);
+                    currWord.append(c);
 
                     if (curr.isEnd == true) {
-                        word = currSb.toString();
+                        word = currWord.toString();
                         break;
                     }
                 } else {
@@ -59,10 +59,10 @@ class Solution {
                 }
             }
 
-            resultantSb.append(word);
-            if (i < strArray.length - 1) resultantSb.append(" ");
+            resultantSentence.append(word);
+            if (i < sentenceAsArray.length - 1) resultantSentence.append(" ");
         }
 
-        return resultantSb.toString();
+        return resultantSentence.toString();
     }
 }
