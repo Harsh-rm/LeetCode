@@ -9,7 +9,7 @@ class Solution {
         }
 
         public void insert(String word) {
-            TrieNode curr = root;
+            TrieNode curr = this;
 
             for (int i = 0; i < word.length(); i++) {
                 char c = word.charAt(i);
