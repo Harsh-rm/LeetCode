@@ -14,6 +14,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0053-maximum-subarray](https://github.com/Harsh-rm/LeetCode/tree/master/0053-maximum-subarray) |
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
+| [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
 | [0088-merge-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
@@ -27,6 +28,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0039-combination-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0039-combination-sum) |
+| [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
 | [0113-path-sum-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0113-path-sum-ii) |
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
 ## Hash Table
@@ -45,6 +47,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Harsh-rm/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
 | [0290-word-pattern](https://github.com/Harsh-rm/LeetCode/tree/master/0290-word-pattern) |
 | [0409-longest-palindrome](https://github.com/Harsh-rm/LeetCode/tree/master/0409-longest-palindrome) |
@@ -83,6 +86,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
+| [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
 ## Sorting
 |  |
 | ------- |
