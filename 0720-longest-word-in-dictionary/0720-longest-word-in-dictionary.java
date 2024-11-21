@@ -25,12 +25,11 @@ class Solution {
         }
     }
 
-    Trie root;
-
     public String longestWord(String[] words) {
-        root = new Trie();
         if (words == null || words.length == 0) return "";
 
+        Trie root = new Trie();
+        
         for (String word: words) {
             root.insert(word);
         }
@@ -49,6 +48,8 @@ class Solution {
                 }
             }
         }
+
+        if (curr.word == null) return "";
 
         return curr.word;
     }
