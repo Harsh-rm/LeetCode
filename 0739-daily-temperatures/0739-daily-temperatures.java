@@ -4,16 +4,21 @@ class Solution {
 
         int n = temperatures.length;
         int[] result = new int[n];
-        Stack<Integer> MonotonicMinStack = new Stack<>();
+        Stack<Integer> MonotonicMaxStack = new Stack<>();
+        
+        MonotonicMaxStack.push(n - 1);
+        for (int i = n - 2; i >= 0; i--) {
 
-        for (int i = 0; i < n; i++) {
-
-            while(!MonotonicMinStack.isEmpty() && temperatures[i] > temperatures[MonotonicMinStack.peek()]) {
-                int index = MonotonicMinStack.pop();
-                result[index] = i - index;
+            while(!MonotonicMaxStack.isEmpty() && temperatures[i] >= temperatures[MonotonicMaxStack.peek()]) {
+                MonotonicMaxStack.pop();
             }
 
-            MonotonicMinStack.push(i);
+            if (!MonotonicMaxStack.isEmpty()) {
+                int index = MonotonicMaxStack.peek() - i;
+                result[i] = index;
+            }
+
+            MonotonicMaxStack.push(i);
         }
 
         return result;
