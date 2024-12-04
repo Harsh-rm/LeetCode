@@ -17,13 +17,16 @@ class Solution {
         
         if (target < nums[0] || target > nums[n - 1]) return result;
 
-        result[0] = binarySearch(nums, 0, n - 1, target, "first");
+        firstPos = binarySearch(nums, 0, n - 1, target, "first");
 
-        if (result[0] == -1) {
+        if (firstPos == -1) {
             return result;
         }
 
-        result[1] = binarySearch(nums, result[0], n - 1, target, "last");
+        lastPos = binarySearch(nums, firstPos, n - 1, target, "last");
+        
+        result[0] = firstPos;
+        result[1] = lastPos;
 
         return result;
     }
