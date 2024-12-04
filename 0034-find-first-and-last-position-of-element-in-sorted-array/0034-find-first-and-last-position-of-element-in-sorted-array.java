@@ -1,3 +1,12 @@
+/*
+    Leetcode Problem 34: Find First and Last Position of Element in Sorted Array 
+    T.C: O(log(n)) - log(n) + log(n) = 2log(n)
+    S.C: O(1) - Expected to give out an array of length 2
+
+    Use Binary Search technique to find the position of the target
+    1st Binary Search to find leftmost occurence (as the given array is sorted in ascending order)
+    2nd Binary Search to find the rightmost occrence.
+*/
 class Solution {
     public int[] searchRange(int[] nums, int target) {
         int n = nums.length;
