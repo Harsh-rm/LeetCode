@@ -1,59 +1,64 @@
 class Solution {
     public int[] searchRange(int[] nums, int target) {
-        if (nums == null || nums.length == 0) return new int[] {-1, -1};
-        if (target < nums[0] || target > nums[nums.length - 1]) return new int[] {-1, -1};
+        int n = nums.length;
+        int[] result = new int[] {-1, -1};
+        int firstPos, lastPos;
 
-        int firstOcc = binarySearchFirst(nums, target);
-        if (firstOcc == -1) {
-            return new int[] {-1, -1};
+        if (nums == null || nums.length == 0) return result;
+        
+        if (target < nums[0] || target > nums[n - 1]) return result;
+
+        firstPos = binarySearchFirst(nums, 0, n - 1, target);
+
+        if (firstPos == -1) {
+            return result;
         }
 
-        int lastOcc = binarySearchLast(nums, target, firstOcc);
-        return new int[] {firstOcc, lastOcc};
+        lastPos = binarySearchLast(nums, firstPos, n - 1, target);
+        
+        result[0] = firstPos;
+        result[1] = lastPos;
+
+        return result;
     }
 
-    private int binarySearchFirst(int[] nums, int target) {
-        int low = 0;
-        int n = nums.length;
-        int high = n - 1;
-
+    public int binarySearchFirst(int[] nums, int low, int high, int target) {
         while (low <= high) {
-            int mid = low + (high - low) / 2;
+            int mid = low + (high - low) / 2; //prevent integer overflow
 
             if (nums[mid] == target) {
-                if (mid == low || nums[mid - 1] < target) {
+                if (mid == low || nums[mid - 1] < nums[mid]) {
                     return mid;
                 }
                 high = mid - 1;
-            }
-            else if (nums[mid] < target) {
+
+            } else if (nums[mid] < target) {
                 low = mid + 1;
-            }
-            else {
+            } else {
                 high = mid - 1;
             }
         }
+
         return -1;
     }
 
-    private int binarySearchLast(int[] nums, int target, int firstOcc) {
-        int low = firstOcc;
-        int n = nums.length;
-        int high = n - 1;
-
+    public int binarySearchLast(int[] nums, int low, int high, int target) {
         while (low <= high) {
-            int mid = low + (high - low) / 2;
+            int mid = low + (high - low) / 2; //prevent integer overflow
 
             if (nums[mid] == target) {
-                if (mid == high || nums[mid + 1] > target) {
+                if (mid == high || nums[mid + 1] > nums[mid]) {
                     return mid;
                 }
                 low = mid + 1;
-            }
-            else {
+
+            } else if (nums[mid] < target) {
+                low = mid + 1;
+            } else {
                 high = mid - 1;
             }
         }
-        return firstOcc;
+
+        return -1;
     }
 }
