@@ -17,45 +17,28 @@ class Solution {
         
         if (target < nums[0] || target > nums[n - 1]) return result;
 
-        firstPos = binarySearchFirst(nums, 0, n - 1, target);
+        result[0] = binarySearch(nums, 0, n - 1, target, "first");
 
-        if (firstPos == -1) {
+        if (result[0] == -1) {
             return result;
         }
 
-        lastPos = binarySearchLast(nums, firstPos, n - 1, target);
-        
-        result[0] = firstPos;
-        result[1] = lastPos;
+        result[1] = binarySearch(nums, result[0], n - 1, target, "last");
 
         return result;
     }
 
-    public int binarySearchFirst(int[] nums, int low, int high, int target) {
+    public int binarySearch(int[] nums, int low, int high, int target, String position) {
         while (low <= high) {
             int mid = low + (high - low) / 2; //prevent integer overflow
 
-            if (nums[mid] == target) {
+            if (nums[mid] == target && position.equals("first")) {
                 if (mid == low || nums[mid - 1] < nums[mid]) {
                     return mid;
                 }
                 high = mid - 1;
 
-            } else if (nums[mid] < target) {
-                low = mid + 1;
-            } else {
-                high = mid - 1;
-            }
-        }
-
-        return -1;
-    }
-
-    public int binarySearchLast(int[] nums, int low, int high, int target) {
-        while (low <= high) {
-            int mid = low + (high - low) / 2; //prevent integer overflow
-
-            if (nums[mid] == target) {
+            } else if (nums[mid] == target && position.equals("last")) {
                 if (mid == high || nums[mid + 1] > nums[mid]) {
                     return mid;
                 }
