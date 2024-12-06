@@ -180,6 +180,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0155-min-stack](https://github.com/Harsh-rm/LeetCode/tree/master/0155-min-stack) |
 | [0173-binary-search-tree-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0173-binary-search-tree-iterator) |
+| [0232-implement-queue-using-stacks](https://github.com/Harsh-rm/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0739-daily-temperatures](https://github.com/Harsh-rm/LeetCode/tree/master/0739-daily-temperatures) |
 ## Monotonic Stack
 |  |
@@ -204,6 +205,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0155-min-stack](https://github.com/Harsh-rm/LeetCode/tree/master/0155-min-stack) |
 | [0173-binary-search-tree-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0173-binary-search-tree-iterator) |
 | [0208-implement-trie-prefix-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0208-implement-trie-prefix-tree) |
+| [0232-implement-queue-using-stacks](https://github.com/Harsh-rm/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0460-lfu-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0460-lfu-cache) |
 ## Doubly-Linked List
 |  |
@@ -225,4 +227,8 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0173-binary-search-tree-iterator) |
+## Queue
+|  |
+| ------- |
+| [0232-implement-queue-using-stacks](https://github.com/Harsh-rm/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 <!---LeetCode Topics End-->
