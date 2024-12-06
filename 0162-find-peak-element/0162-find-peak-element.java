@@ -22,10 +22,17 @@ class Solution {
             //Check if you are at the peak element
             if ((mid == low || nums[mid - 1] < nums[mid]) && (mid == high || nums[mid + 1] < nums[mid])) return mid;
 
-            if (mid == n - 1 || nums[mid + 1] > nums[mid]) {
-                low = mid + 1;
-            } else {
+            System.out.println(mid);
+            if (mid == low) {
+                if (nums[mid] > nums[mid + 1]) {
+                    high = mid - 1;
+                } else {
+                    low = mid + 1;
+                }          
+            } else if (nums[mid - 1] > nums[mid]) {
                 high = mid - 1;
+            } else {
+                low = mid + 1;
             }
         }
 
