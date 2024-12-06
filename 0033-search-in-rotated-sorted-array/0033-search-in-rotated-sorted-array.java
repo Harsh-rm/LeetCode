@@ -7,6 +7,7 @@
     the sorted half else perform binary search on the unsorted half
     repeat the above steps until the target is found else return -1.
 */
+
 class Solution {
     public int search(int[] nums, int target) {
         if (nums == null || nums.length == 0) return -1;
