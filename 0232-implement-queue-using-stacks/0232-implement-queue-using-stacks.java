@@ -36,13 +36,11 @@ class MyQueue {
     }
     
     public boolean empty() {
-        if (!out.isEmpty()) {
-            return false;
-        } else if (!in.isEmpty()) {
-            return false;
+        if (out.isEmpty() && in.isEmpty()) {
+            return true;
         }
 
-        return true;
+        return false;
     }
 }
 
