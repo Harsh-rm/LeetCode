@@ -6,6 +6,9 @@
     Created the HashMap solution using an Array of nodes (Linked List):
     Initialized an Array of 10^4 (At most 10^4 calls will be made to put, get, and remove)
     And each index of this array will contain at most 100 nodes as 0 <= key, value <= 10^6
+    The property of a Hash function is to be deterministic - i.e for every key there is only one value
+    and duplicate keys do not exist.
+    Hash function used to store elements is - Integer.hashCode(key) % buckets (or we can use key % buckets)
 */
 
 class MyHashMap {
