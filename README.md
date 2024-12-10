@@ -30,6 +30,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0648-replace-words](https://github.com/Harsh-rm/LeetCode/tree/master/0648-replace-words) |
 | [0720-longest-word-in-dictionary](https://github.com/Harsh-rm/LeetCode/tree/master/0720-longest-word-in-dictionary) |
 | [0739-daily-temperatures](https://github.com/Harsh-rm/LeetCode/tree/master/0739-daily-temperatures) |
+| [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 ## Backtracking
 |  |
@@ -53,6 +54,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0560-subarray-sum-equals-k](https://github.com/Harsh-rm/LeetCode/tree/master/0560-subarray-sum-equals-k) |
 | [0648-replace-words](https://github.com/Harsh-rm/LeetCode/tree/master/0648-replace-words) |
 | [0720-longest-word-in-dictionary](https://github.com/Harsh-rm/LeetCode/tree/master/0720-longest-word-in-dictionary) |
+| [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 ## String
 |  |
@@ -77,6 +79,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0146-lru-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0146-lru-cache) |
 | [0160-intersection-of-two-linked-lists](https://github.com/Harsh-rm/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0460-lfu-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0460-lfu-cache) |
+| [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 ## Divide and Conquer
 |  |
@@ -210,6 +213,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0208-implement-trie-prefix-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0208-implement-trie-prefix-tree) |
 | [0232-implement-queue-using-stacks](https://github.com/Harsh-rm/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0460-lfu-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0460-lfu-cache) |
+| [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 ## Doubly-Linked List
 |  |
@@ -238,5 +242,6 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 ## Hash Function
 |  |
 | ------- |
+| [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 <!---LeetCode Topics End-->
