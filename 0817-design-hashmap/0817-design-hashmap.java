@@ -1,3 +1,13 @@
+/*
+    Leetcode problem 706: Design HashMap
+    T.C: O(1) - Average T.C, Worst Case O(100) all the nodes in the node list element is not present
+    S.C: O(1) - Expected to create a Hashmap of size 10^4 - Average space is constant (Worst case - O(10^6))
+
+    Created the HashMap solution using an Array of nodes (Linked List):
+    Initialized an Array of 10^4 (At most 10^4 calls will be made to put, get, and remove)
+    And each index of this array will contain at most 100 nodes as 0 <= key, value <= 10^6
+*/
+
 class MyHashMap {
 
     class Node {
@@ -33,7 +43,7 @@ class MyHashMap {
 
         return prev;
     }
-    
+    //T.C: O(1) - average case
     public void put(int key, int value) {
         int bucket = getBucket(key);
         //Check if bucket is null - i.e Node list does not exist at index with hash property of key
@@ -50,7 +60,7 @@ class MyHashMap {
             prev.next.value = value;
         }
     }
-    
+    //T.C: O(1) - average case
     public int get(int key) {
         int bucket = getBucket(key);
         //Check if bucket is null
@@ -65,7 +75,7 @@ class MyHashMap {
 
         return prev.next.value;
     }
-    
+    //T.C: O(1) - average case
     public void remove(int key) {
         int bucket = getBucket(key);
         //Check if bucket is null
