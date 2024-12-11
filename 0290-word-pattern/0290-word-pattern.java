@@ -11,17 +11,18 @@ class Solution {
 
         for (int i = 0; i < pattern.length(); i++) {
             char c = pattern.charAt(i);
+            String str = sArray[i];
 
             if (!charToStringMap.containsKey(c)) {
-                charToStringMap.put(c, sArray[i]);
+                charToStringMap.put(c, str);
 
-                if (!mappedStringSet.contains(sArray[i])){
-                    mappedStringSet.add(sArray[i]);
+                if (!mappedStringSet.contains(str)) {
+                    mappedStringSet.add(str);
                 } else {
                     return false;
                 }
             } else {
-                if (!charToStringMap.get(c).equals(sArray[i])) {
+                if (!charToStringMap.get(c).equals(str)) {
                     return false;
                 }
             }
