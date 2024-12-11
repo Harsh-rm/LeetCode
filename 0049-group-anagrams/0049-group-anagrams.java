@@ -1,9 +1,10 @@
     /*
         Leetcode problem 49: Group Anagrams
-        T.C: O(nk*log(k)) :: S.C: O(n)
+        T.C: O(nk) :: S.C: O(n)
 
-        Solved using a HashMap of sorted strings as key and List of strings that grouped 
-        as anagrams as values. Finally return all the values as a new ArrayList.
+        Solved using a HashMap of prime product of each char (i.e c - 'a' is associated to a prime number) 
+        string as key and List of strings that grouped as anagrams as values. Finally return all the values
+        as a new ArrayList.
     */
 
     class Solution {
