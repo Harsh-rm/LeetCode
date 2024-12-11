@@ -4,31 +4,30 @@ class Solution {
 
         int count = 0;
         ArrayList<int[]> result = new ArrayList<>();
-        ArrayList<Integer> rSum = new ArrayList<>();
-        rSum.add(0);
+
+        int rSum = 0;
+        HashMap<Integer, ArrayList<Integer>> rSumMap = new HashMap<>();
+
+        rSumMap.put(rSum, new ArrayList<>());
+        rSumMap.get(rSum).add(-1);
 
         for (int i = 0; i < nums.length; i++) {
-            rSum.add(rSum.get(i) + nums[i]);
-        }
-        
-        //System.out.println(rSum);
+            rSum += nums[i];
 
-        for (int i = nums.length; i >= 0; i--) {
-            int diff = rSum.get(i) - k;
-
-            for (int j = i - 1; j >= 0; j--) {
-                if (rSum.get(j) == diff) {
-                    //int subArray = Arrays.copyOfRange(nums, j , i);                   
-                    //result.add(subArray);
-                    count++;                    
+            // Check if there exists a runningSum such that runningSum - k exists in the map
+            int diff = rSum - k;
+            if (rSumMap.containsKey(diff)) {
+                for (int startIdx : rSumMap.get(diff)) {
+                    //result.add(Arrays.copyOfRange(nums, startIdx + 1, i + 1));
+                    count++;
                 }
             }
+
+            // Add the current running sum to the map
+            rSumMap.putIfAbsent(rSum, new ArrayList<>());
+            rSumMap.get(rSum).add(i);
         }
-    /*
-        for (int[] subArray : result) {
-            System.out.println(Arrays.toString(subArray));
-        }
-    */
+
         return count;
     }
 }
