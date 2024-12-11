@@ -10,24 +10,34 @@
         public List<List<String>> groupAnagrams(String[] strs) {
             if (strs == null || strs.length == 0) return new ArrayList<>();
             
-            HashMap<String, List<String>> sortedStringMap = new HashMap<>();
+            HashMap<Double, List<String>> primeProductMap = new HashMap<>();
 
             for(int i = 0; i < strs.length; i++) {
                 String str = strs[i];
                 
-                //Sort the string in ascending order
-                char[] charArray = str.toCharArray();
-                Arrays.sort(charArray);
-                String sortedString = String.valueOf(charArray);
+                double primeProduct = primeProduct(str);
                 
                 //Check if the sortedString is present in the HashMap
-                if (!sortedStringMap.containsKey(sortedString)) {
-                    sortedStringMap.put(sortedString, new ArrayList<>());
+                if (!primeProductMap.containsKey(primeProduct)) {
+                    primeProductMap.put(primeProduct, new ArrayList<>());
                 }
                 //Finally update the key in hashmap with the current string
-                sortedStringMap.get(sortedString).add(str);
+                primeProductMap.get(primeProduct).add(str);
             }
 
-            return new ArrayList<>(sortedStringMap.values());
+            return new ArrayList<>(primeProductMap.values());
+        }
+
+        private double primeProduct(String str) {
+            int[] primes = {2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103};
+            double result = 1;
+
+            //Find the product of all prime numbers associated with each char in str
+            for (int i = 0; i < str.length(); i++) {
+                char c = str.charAt(i);
+                result = result * primes[c - 'a'];
+            }
+
+            return result;
         }
     }
