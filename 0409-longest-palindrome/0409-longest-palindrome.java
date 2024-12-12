@@ -11,24 +11,19 @@ class Solution {
             charOccMap.put(c, charOccMap.getOrDefault(c, 0) + 1);
         }
 
-        boolean flag = true;
+        boolean flag = false;
 
         for (char key: charOccMap.keySet()) {
             if (charOccMap.get(key) % 2 == 0) {
                 longest += charOccMap.get(key);
-            } else if (charOccMap.get(key) > 2) {
-                if (flag) {
-                    longest += charOccMap.get(key);
-                    flag = false;
-                } else {
-                    longest += charOccMap.get(key) - 1;                    
-                }
             } else {
-                if (flag) {
-                    longest++;
-                    flag = false;
-                }
+                longest += charOccMap.get(key) - 1;
+
             }
+        }
+
+        if(flag) {
+            longest++;
         }
 
         return longest;
