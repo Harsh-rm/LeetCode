@@ -13,48 +13,28 @@
     Leetcode problem 206: Reverse a Linked List
     T.C: O(n) :: S.C: O(1)
 
-    Solved using two pointers: 
+    Solved using three pointers: Previous pointing to null, Current pointing to 
 */
 
 class Solution {
     public ListNode reverseList(ListNode head) {
         if (head == null) return head;
 
-        ListNode prev = null;
+        ListNode dummy = new ListNode(Integer.MIN_VALUE, head);
+
+        ListNode prev = head;
         ListNode curr = head;
         ListNode fast = head.next;
 
         while (fast != null) {
-            curr.next = prev;
-            prev = curr;
-            curr = fast;
+            dummy.next = fast;
             fast = fast.next;
+            curr.next = fast;
+            dummy.next.next = prev;
+            prev = dummy.next;
         }
-        
-        curr.next = prev;
+        curr.next = fast;
 
-        return curr;
+        return dummy.next;
     }
-
-    /*
-        Stack based solution -
-
-        Stack<ListNode> s = new Stack<>();
-        ListNode curr = dummy.next;
-
-        while (curr != null) {
-            s.push(curr);
-            curr = curr.next;
-        }
-
-        dummy.next = s.pop();
-        curr = dummy.next;
-
-        while (!s.isEmpty()) {
-            curr.next = s.pop();
-            curr = curr.next;
-        }
-
-        curr.next = null;
-    */
 }
