@@ -20,7 +20,25 @@ class Solution {
     public ListNode reverseList(ListNode head) {
         if (head == null) return head;
 
-        ListNode dummy = new ListNode(Integer.MIN_VALUE, head);
+        ListNode prev = null;
+        ListNode curr = head;
+        ListNode fast = head.next;
+
+        while (fast != null) {
+            curr.next = prev;
+            prev = curr;
+            curr = fast;
+            fast = fast.next;
+        }
+        
+        curr.next = prev;
+
+        return curr;
+    }
+
+    /*
+        Stack based solution -
+
         Stack<ListNode> s = new Stack<>();
         ListNode curr = dummy.next;
 
@@ -38,21 +56,5 @@ class Solution {
         }
 
         curr.next = null;
-/*
-        ListNode curr = dummy;
-        ListNode ahead = dummy.next;
-
-        while (ahead != null && ahead.next != null) {
-            ListNode prev = dummy.next;
-            dummy.next = ahead;
-            ahead = ahead.next;
-            dummy.next.next = prev;
-            curr.next = ahead;
-            curr = ahead;
-
-            System.out.println(dummy.next.val);
-        }
-*/
-        return dummy.next;
-    }
+    */
 }
