@@ -14,6 +14,7 @@
  * }
  */
 class Solution {
+
     List<List<Integer>> result;
     int target;
 
@@ -23,33 +24,24 @@ class Solution {
         result = new ArrayList<>();
         target = targetSum;
 
-        dfs(root, 0, new ArrayList<>());
-        
+        helper(root, 0, new ArrayList<>());
+
         return result;
     }
 
-    private void dfs(TreeNode root, int sum, List<Integer> path) {
-        //base
+    private void helper(TreeNode root, int sum, List<Integer> path) {
+        //Base case
         if (root == null) return;
-        //logic
-        //action
+        //Logic - DFS
         path.add(root.val);
-        sum = sum + root.val;
-        //check if root is the leaf node
-        if (root.left == null && root.right == null) {
-            if (sum == target) {
-                result.add(new ArrayList<>(path));
-                //System.out.println(path);
-                //return;
-            }
+        sum += root.val;
+
+        if (root.left == null && root.right == null && sum == target) {
+            result.add(path);
+            //return;
         }
 
-        //recursion
-        dfs(root.left, sum, path);
-        dfs(root.right, sum, path);
-
-        //backtracking
-        path.remove(path.size() - 1);
-
+        helper(root.left, sum, new ArrayList<>(path));
+        helper(root.right, sum, new ArrayList<>(path));
     }
 }
