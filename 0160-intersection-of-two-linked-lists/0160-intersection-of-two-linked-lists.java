@@ -16,24 +16,21 @@ public class Solution {
         int lenA = 0;
         int lenB = 0;
         ListNode curr = headA;
-
-        while(curr != null) {
+        while (curr != null) {
             lenA++;
             curr = curr.next;
         }
-
         curr = headB;
-        while(curr != null) {
+        while (curr != null) {
             lenB++;
             curr = curr.next;
         }
 
-        while(lenA > lenB) {
+        while (lenA > lenB) {
             headA = headA.next;
             lenA--;
         }
-
-        while(lenB > lenA) {
+        while (lenA < lenB) {
             headB = headB.next;
             lenB--;
         }
