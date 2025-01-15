@@ -13,7 +13,7 @@
     Leetcode problem 146: Reorder List
     T.C: O(n) :: S.C: O(1) - Amortized T.C
 
-    Solved using two pointers: fast and slow, Position the slow pointer to the middle of the linked List.
+    Solved using two pointers: fast and slow, Position the slow pointer into the middle of the linked List.
     Split the Linked list to two halves. Reverse the second half of Linked list (slow.next - write a 
     helper method). Re-order the Linked list from the split halves (i.e point the head's next to the head
     of the reversed list and then this next to node back to the initial next node in the LL). Congrats problem solved!
