@@ -12,15 +12,7 @@ class Solution {
     public ListNode reverseList(ListNode head) {
         if (head == null || head.next == null) return head;
 
-        return helper(head);
-    }
-
-    private ListNode helper(ListNode head) {
-        if (head.next == null) {
-            return head;
-        }
-
-        ListNode reversed = helper(head.next);
+        ListNode reversed = reverseList(head.next);
 
         head.next.next = head;
         head.next = null;
