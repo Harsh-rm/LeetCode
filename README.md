@@ -9,6 +9,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0011-container-with-most-water](https://github.com/Harsh-rm/LeetCode/tree/master/0011-container-with-most-water) |
 | [0015-3sum](https://github.com/Harsh-rm/LeetCode/tree/master/0015-3sum) |
+| [0027-remove-element](https://github.com/Harsh-rm/LeetCode/tree/master/0027-remove-element) |
 | [0031-next-permutation](https://github.com/Harsh-rm/LeetCode/tree/master/0031-next-permutation) |
 | [0033-search-in-rotated-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0033-search-in-rotated-sorted-array) |
 | [0034-find-first-and-last-position-of-element-in-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0034-find-first-and-last-position-of-element-in-sorted-array) |
@@ -136,6 +137,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0011-container-with-most-water](https://github.com/Harsh-rm/LeetCode/tree/master/0011-container-with-most-water) |
 | [0015-3sum](https://github.com/Harsh-rm/LeetCode/tree/master/0015-3sum) |
+| [0027-remove-element](https://github.com/Harsh-rm/LeetCode/tree/master/0027-remove-element) |
 | [0031-next-permutation](https://github.com/Harsh-rm/LeetCode/tree/master/0031-next-permutation) |
 | [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0080-remove-duplicates-from-sorted-array-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0080-remove-duplicates-from-sorted-array-ii) |
