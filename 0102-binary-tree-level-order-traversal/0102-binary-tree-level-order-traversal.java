@@ -18,13 +18,11 @@
     Leetcode problem 102: Binary Tree Level Order Traversal
     T.C: O(n) :: S.C: O(n) - Space occupied by the Queue
 
-    Solved using BFS: Initialize an empty Queue of TreeNodes with the root (If the root is null, return an empty ArrayList immediately).
-    Then traverse through the Queue by maintianing a size variable for keeping track of each level in the tree (i.e initially size is 1
-    add this element as a new list to the result), go left, and go right, and then add the child if it is not null. Now when you are at 
-    the second level (the size is 2). Repeat this process to retrieve the level order traversal of the Binary tree.
+    Solved using a DFS-based approach: Refer to the comments in the code to understand the depth!
 */
 
 class Solution {
+    //Create a global variable to retain the resultant list
     List<List<Integer>> result;
     
     public List<List<Integer>> levelOrder(TreeNode root) {
@@ -32,28 +30,29 @@ class Solution {
 
         if (root == null) return result;
 
-        Queue<TreeNode> q = new LinkedList<>();
-        q.add(root);
+        //DFS based approach
+        dfs(root, 0);
 
-        while(!q.isEmpty()) {
-            int size = q.size();
-            List<Integer> li = new ArrayList<>();
-
-            for (int i = 0; i < size; i++) {
-                TreeNode curr = q.poll();
-                li.add(curr.val);
-
-                if (curr.left != null) {
-                    q.add(curr.left);
-                }
-                if (curr.right != null) {
-                    q.add(curr.right);
-                }
-            }
-
-            result.add(li);
-        }
-
+        //Return the resultant level order travesed list
         return result;
+    }
+
+    private void dfs(TreeNode root, int index) {
+        //Base case
+        if (root == null) return;
+
+        //Logic
+        //If the index is the same as the size of the result list
+        if (index == result.size()) {
+            //Create a new List at that index of the result list
+            result.add(new ArrayList<>());
+        }
+        //Retrieve the list at the current index of the result list and add the root.val
+        result.get(index).add(root.val);
+
+        //Go left and increase the level by one
+        dfs(root.left, index + 1);
+        //Go right and increase the level by one
+        dfs(root.right, index + 1);
     }
 }
