@@ -22,16 +22,13 @@ class Solution {
 
     private void dfs(char[][] grid, int row, int col) {
         //Base case
-
+        if (row < 0 || col < 0 || row == m || col == n || grid[row][col] != '1') return;
         //logic
         grid[row][col] = '0';
         for(int[] dir: dirs) {
             int newRow = row + dir[0];
             int newCol = col + dir[1];
-
-            if (newRow >= 0 && newRow < m && newCol >= 0 && newCol < n && grid[newRow][newCol] == '1') {
-                dfs(grid, newRow, newCol);
-            }
+            dfs(grid, newRow, newCol);
         }
     }
 }
