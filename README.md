@@ -164,6 +164,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0113-path-sum-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0113-path-sum-ii) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0129-sum-root-to-leaf-numbers](https://github.com/Harsh-rm/LeetCode/tree/master/0129-sum-root-to-leaf-numbers) |
+| [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
 ## Binary Search Tree
 |  |
 | ------- |
@@ -185,6 +186,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0101-symmetric-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0101-symmetric-tree) |
 | [0102-binary-tree-level-order-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0102-binary-tree-level-order-traversal) |
+| [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
 ## Dynamic Programming
 |  |
 | ------- |
@@ -268,4 +270,12 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0143-reorder-list](https://github.com/Harsh-rm/LeetCode/tree/master/0143-reorder-list) |
 | [0206-reverse-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0206-reverse-linked-list) |
+## Graph
+|  |
+| ------- |
+| [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
+## Topological Sort
+|  |
+| ------- |
+| [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
 <!---LeetCode Topics End-->
