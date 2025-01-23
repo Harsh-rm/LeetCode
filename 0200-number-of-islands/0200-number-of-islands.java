@@ -13,6 +13,7 @@ class Solution {
                     count++;
                     Queue<int[]> q = new LinkedList<>();
                     q.add(new int[] {i, j});
+                    grid[i][j] = '0';
                     //Perform BFS to find the island across the m x n matrix and mark them as '0' or '2'
                     while(!q.isEmpty()) {
                         int[] curr = q.poll();
