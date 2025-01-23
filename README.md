@@ -26,6 +26,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0162-find-peak-element](https://github.com/Harsh-rm/LeetCode/tree/master/0162-find-peak-element) |
 | [0189-rotate-array](https://github.com/Harsh-rm/LeetCode/tree/master/0189-rotate-array) |
+| [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/Harsh-rm/LeetCode/tree/master/0560-subarray-sum-equals-k) |
@@ -118,6 +119,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
+| [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 ## Sorting
 |  |
 | ------- |
@@ -164,6 +166,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0113-path-sum-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0113-path-sum-ii) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0129-sum-root-to-leaf-numbers](https://github.com/Harsh-rm/LeetCode/tree/master/0129-sum-root-to-leaf-numbers) |
+| [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
 ## Binary Search Tree
 |  |
@@ -186,6 +189,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0101-symmetric-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0101-symmetric-tree) |
 | [0102-binary-tree-level-order-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0102-binary-tree-level-order-traversal) |
+| [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
 ## Dynamic Programming
 |  |
@@ -278,4 +282,8 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
+## Union Find
+|  |
+| ------- |
+| [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 <!---LeetCode Topics End-->
