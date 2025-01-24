@@ -13,11 +13,23 @@
  *     }
  * }
  */
+
+/*
+    Leetcode problem 173: Binary Search Tree Iterator
+    T.C: O(n) :: S.C: O(h) - Amortized S.C
+
+    Solved using DFS Approach: Traverse to the leftmost leaf node of the given root, while pushing
+    each of the TreeNode to a stack. When next() is called, pop the element on top of the stack and 
+    perform the same dfs operation on its right child (do not push if the TreeNode is null). For 
+    the hasNext() method, return the negated true value of isEmpty() for the BSTIterator's stack data structure.
+*/
+
 class BSTIterator {
     Stack<TreeNode> s;
+
     public BSTIterator(TreeNode root) {
         s = new Stack<>();
-        dfs(root);
+        dfs(root);   
     }
     
     public int next() {
