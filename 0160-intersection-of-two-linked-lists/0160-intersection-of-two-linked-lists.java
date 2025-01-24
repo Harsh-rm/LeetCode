@@ -9,6 +9,17 @@
  *     }
  * }
  */
+
+ /*
+    Leetcode problem 160: Intersection of Two Linked lists
+    T.C: O(m + n) :: S.C: O(1) - Amortized T.C from O(2*(m + n))
+
+    Solved using two pointers: First, find the length of both the Linked Lists. Then move the head of the
+    list with the longer length, such that the two list heads have the same number of nodes to be traversed
+    until the end. Now, move both heads and check if they coincide at any of the nodes from the two lists.
+    Return the head of any list (which could be the point of intersection or a null value i.e. disjoint lists).
+*/
+
 public class Solution {
     public ListNode getIntersectionNode(ListNode headA, ListNode headB) {
         if (headA == null || headB == null) return null;
