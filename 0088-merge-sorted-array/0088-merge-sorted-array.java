@@ -1,25 +1,25 @@
 class Solution {
     public void merge(int[] nums1, int m, int[] nums2, int n) {
-        if (nums1 == null || nums1.length == 0) return;
-        
-        int p1 = m - 1, p2 = n - 1, p3 = m + n - 1;
-        
-        while (p1 >= 0 && p2 >= 0) {
-            if (nums1[p1] >= nums2[p2]) {
-                nums1[p3] = nums1[p1];
-                p1--;
+        if (nums2.length == 0) return;
+
+        int first = m - 1;
+        int second = n - 1;
+
+        while (first >= 0 && second >= 0) {
+            if (nums1[first] > nums2[second]) {
+                nums1[first + second + 1] = nums1[first];
+                first--;
+            } else {
+                System.out.println(nums2[second]);
+                nums1[first + second + 1] = nums2[second];
+                second--;
             }
-            else {
-                nums1[p3] = nums2[p2];
-                p2--;
-            }
-            p3--;
         }
-        
-        while (p2 >= 0) {
-            nums1[p3] = nums2[p2];
-            p3--;
-            p2--;
+
+        while (second >= 0) {
+            nums1[second] = nums2[second];
+            second--;
         }
+
     }
 }
