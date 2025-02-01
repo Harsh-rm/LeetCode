@@ -23,12 +23,12 @@ class Solution {
         //Base case
         if (index == word.length()) return true;
                     
-        if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] == '\u0000') return false;
+        if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] == ' ') return false;
 
         if (board[i][j] == word.charAt(index)) {
             //Action
             char temp = board[i][j];
-            board[i][j] = '\u0000';
+            board[i][j] = ' ';
 
             //Recurse
             for (int[] dir: dirs) {
