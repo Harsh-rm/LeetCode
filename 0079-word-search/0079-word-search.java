@@ -23,15 +23,11 @@ class Solution {
 
     private boolean dfs(char[][] board, String word, int index, int i, int j) {
         //Base case
-        //System.out.println(word.length());
         if (index == word.length()) return true;
-                    
-        //if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] == ' ') return false;
-
         
         //Action
         char temp = board[i][j];
-        board[i][j] = ' ';
+        board[i][j] = '\u0000';
 
         //Recurse
         for (int[] dir: dirs) {
