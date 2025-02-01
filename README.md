@@ -72,6 +72,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0205-isomorphic-strings](https://github.com/Harsh-rm/LeetCode/tree/master/0205-isomorphic-strings) |
 | [0208-implement-trie-prefix-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0208-implement-trie-prefix-tree) |
 | [0290-word-pattern](https://github.com/Harsh-rm/LeetCode/tree/master/0290-word-pattern) |
+| [0394-decode-string](https://github.com/Harsh-rm/LeetCode/tree/master/0394-decode-string) |
 | [0409-longest-palindrome](https://github.com/Harsh-rm/LeetCode/tree/master/0409-longest-palindrome) |
 | [0412-fizz-buzz](https://github.com/Harsh-rm/LeetCode/tree/master/0412-fizz-buzz) |
 | [0648-replace-words](https://github.com/Harsh-rm/LeetCode/tree/master/0648-replace-words) |
@@ -208,6 +209,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0155-min-stack](https://github.com/Harsh-rm/LeetCode/tree/master/0155-min-stack) |
 | [0173-binary-search-tree-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0173-binary-search-tree-iterator) |
 | [0232-implement-queue-using-stacks](https://github.com/Harsh-rm/LeetCode/tree/master/0232-implement-queue-using-stacks) |
+| [0394-decode-string](https://github.com/Harsh-rm/LeetCode/tree/master/0394-decode-string) |
 | [0739-daily-temperatures](https://github.com/Harsh-rm/LeetCode/tree/master/0739-daily-temperatures) |
 ## Monotonic Stack
 |  |
@@ -275,6 +277,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0143-reorder-list](https://github.com/Harsh-rm/LeetCode/tree/master/0143-reorder-list) |
 | [0206-reverse-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0206-reverse-linked-list) |
+| [0394-decode-string](https://github.com/Harsh-rm/LeetCode/tree/master/0394-decode-string) |
 ## Graph
 |  |
 | ------- |
