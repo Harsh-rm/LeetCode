@@ -3,15 +3,17 @@ class Solution {
     int m, n;
 
     public boolean exist(char[][] board, String word) {
-        if (word == null) return false;
+        if (word == null || word.length() == 0) return false;
 
         m = board.length;
         n = board[0].length;
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
-                if (dfs(board, word, 0, i, j)) {
-                    return true;
+                if (board[i][j] == word.charAt(0)) {                    
+                    if (dfs(board, word, 1, i, j)) {
+                        return true;
+                    }
                 }
             }
         }
@@ -21,28 +23,32 @@ class Solution {
 
     private boolean dfs(char[][] board, String word, int index, int i, int j) {
         //Base case
+        //System.out.println(word.length());
         if (index == word.length()) return true;
                     
-        if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] == ' ') return false;
+        //if (i < 0 || i >= m || j < 0 || j >= n || board[i][j] == ' ') return false;
 
-        if (board[i][j] == word.charAt(index)) {
-            //Action
-            char temp = board[i][j];
-            board[i][j] = ' ';
+        
+        //Action
+        char temp = board[i][j];
+        board[i][j] = ' ';
 
-            //Recurse
-            for (int[] dir: dirs) {
-                int nr = i + dir[0];
-                int nc = j + dir[1];
-                
-                if (dfs(board, word, index + 1, nr, nc)) {
-                    return true;
+        //Recurse
+        for (int[] dir: dirs) {
+            int nr = i + dir[0];
+            int nc = j + dir[1];
+
+            if (nr >= 0 && nr < m && nc >= 0 && nc < n) {
+                if (board[nr][nc] == word.charAt(index)) {
+                    if (dfs(board, word, index + 1, nr, nc)) {
+                        return true;
+                    }
                 }
             }
-
-            //Backtrack
-            board[i][j] = temp;
         }
+
+        //Backtrack
+        board[i][j] = temp;
 
         return false;
     }
