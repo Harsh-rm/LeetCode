@@ -8,8 +8,6 @@ class Solution {
         StringBuilder currStr = new StringBuilder();
         int num = 0;
 
-        //strStack.push(currStr);
-
         for (int i = 0; i < s.length(); i++) {
             Character ch = s.charAt(i);
 
