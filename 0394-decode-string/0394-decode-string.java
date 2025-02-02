@@ -1,40 +1,47 @@
 class Solution {
-    int i;
     public String decodeString(String s) {
         if (s == null || s.length() == 0) return "";
 
-        int currNum = 0;
-        StringBuilder currStr = new StringBuilder();
+        Stack<StringBuilder> strStack = new Stack<>();
+        Stack<Integer> numStack = new Stack<>();
 
-        while (i < s.length()) {
-            char c = s.charAt(i);
-            if(Character.isDigit(c)) {
-                currNum = currNum * 10 + (c - '0');
-                i++;
+        StringBuilder currStr = new StringBuilder();
+        int num = 0;
+
+        //strStack.push(currStr);
+
+        for (int i = 0; i < s.length(); i++) {
+            Character ch = s.charAt(i);
+
+            if (Character.isDigit(ch)) {
+                num = num * 10 + Character.getNumericValue(ch);
             }
-            else if (c == '[') {
-                i++;
-                // Push the currStr and the currNum in to the recursive stack
-                String decoded = decodeString(s);
-                
-                // Pop the currStr and append it to the decoded string and then append the resultant String to itself currNum times
+            else if (ch == '[') {
+                strStack.push(currStr);
+                numStack.push(num);
+                num = 0;
+                //currStr.setLength(0); //This modifies the reference of the currStr in the stack and hence does not work
+                currStr = new StringBuilder();
+            }
+            else if (ch == ']') {
+                int times = numStack.pop();
+            /*  
+                //This Method is more efficient     
                 StringBuilder newStr = new StringBuilder();
-                for (int j = 0; j < currNum; j++) {
-                    newStr.append(decoded);
+                for (int count = 1; count < times; count++) {                    
+                    newStr.append(currStr);
                 }
-                currStr.append(newStr);
-                currNum = 0;
-            }
-            else if (c == ']') {
-                i++;
-                return currStr.toString();
+                currStr = strStack.pop().append(newStr);
+            */
+                currStr.append(currStr.toString().repeat(times - 1)); //For Practice
+                StringBuilder str = strStack.pop();
+                currStr.insert(0, str);
             }
             else {
-                currStr.append(c);
-                i++;
+                currStr.append(ch);
             }
         }
 
-       return currStr.toString();
+        return currStr.toString();
     }
 }
