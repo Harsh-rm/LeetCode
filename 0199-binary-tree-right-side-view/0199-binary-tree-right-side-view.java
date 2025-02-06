@@ -21,27 +21,24 @@ class Solution {
 
         if (root == null) return result;
 
-        Queue<TreeNode> bfs = new LinkedList<>();
-        bfs.add(root);
-
-        while (!bfs.isEmpty()) {
-            int size = bfs.size();
-
-            for (int i = 0; i < size; i++) {
-                TreeNode curr = bfs.poll();
-
-                if (curr.left != null) {
-                    bfs.add(curr.left);
-                }
-                if (curr.right != null) {
-                    bfs.add(curr.right);
-                }
-                if (i == size - 1) {
-                    result.add(curr.val);
-                }
-            }
-        }
+        helper(root, 0);
 
         return result;
+    }
+
+    private void helper(TreeNode root, Integer level) {
+        //Base case
+        if (root == null) {
+            return;
+        }
+
+        //Logic
+        //action
+        if (level == result.size()) {
+            result.add(root.val);
+        }
+        //recurse
+        helper(root.right, level + 1);
+        helper(root.left, level + 1);
     }
 }
