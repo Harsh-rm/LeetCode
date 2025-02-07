@@ -1,44 +1,56 @@
 class Solution {
+    boolean result;
+
     public boolean canFinish(int numCourses, int[][] prerequisites) {
-        if (numCourses == 0) return true;
-        
-        int[] indegrees = new int[numCourses];
-        HashMap<Integer, List<Integer>> map= new HashMap(); 
-            
-        for (int[] edge: prerequisites) {
-            int in = edge[0];
-            int out = edge[1];
-            indegrees[in]++;
-            if (!map.containsKey(out)) {
-                 map.put(out, new ArrayList<>());
-            }
-            map.get(out).add(in);
+        result = false;
+
+        if (numCourses == 0) return result;
+
+        //These are the courses that are dependant on other courses and have to be taken prior to others 
+        //All sorted in the same list. Note: not index wise sorting rather depandant wise sorting
+        int[] topologicalSort = new int[numCourses];
+
+        //This map contains all the prerequisite keys associated with the dependant courses
+        HashMap<Integer, List<Integer>> adjacencyList = new HashMap<>();
+
+        for (int i = 0; i < prerequisites.length; i++) {
+            topologicalSort[prerequisites[i][0]]++;
+
+            adjacencyList.computeIfAbsent(prerequisites[i][1], key -> new ArrayList<>()).add(prerequisites[i][0]);
         }
-        
-        int coursesCompleted = 0;
-        Queue<Integer> q = new LinkedList<>();
-        
+
+        AtomicInteger coursesCompletedAtomic = new AtomicInteger();
+        Queue<Integer> bfs = new LinkedList<>();
+
         for (int i = 0; i < numCourses; i++) {
-            if (indegrees[i] == 0) {
-                coursesCompleted++;
-                q.add(i);
+            if (topologicalSort[i] == 0) {
+                coursesCompletedAtomic.getAndIncrement();
+                bfs.add(i);
             }
         }
-        
-        while (!q.isEmpty()) {
-            int curr = q.poll();
-            List<Integer> edges = map.get(curr);
-            if (edges != null) {
-                for (int edge : edges ) {
-                    indegrees[edge]--;
-                    if (indegrees[edge] == 0) {
-                        coursesCompleted++;
-                        q.add(edge);
-                    }
-                }
-            }
+
+        while(!bfs.isEmpty()) {
+            int currCourse = bfs.poll();
+
+            Optional.ofNullable(adjacencyList.get(currCourse))
+
+                    .ifPresent(list -> list.forEach(dependantCourse -> {
+
+                        if (--topologicalSort[dependantCourse] == 0) {
+
+                            coursesCompletedAtomic.getAndIncrement();
+
+                            bfs.add(dependantCourse);  
+
+                        }
+
+                    }));
         }
-        
-        return coursesCompleted == numCourses;
+
+        if (coursesCompletedAtomic.get() == numCourses) {
+            result = true;
+        }
+
+        return result;
     }
 }
