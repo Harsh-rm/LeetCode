@@ -6,7 +6,7 @@ class Solution {
 
         if (nums == null || nums.length == 1) return result;
 
-        HashMap<Integer, Integer> uniquePairs = new HashMap<>();
+        HashMap<Integer, Long> uniquePairs = new HashMap<>();
 
         //Calculate the total pairs n * (n - 1) / 2
         result = (long) nums.length * (nums.length - 1) / 2;
@@ -14,9 +14,9 @@ class Solution {
         for (int i = 0; i < nums.length; i++) {
             int currNum = nums[i] - i;
 
-            result -= uniquePairs.getOrDefault(currNum, 0);
+            result -= uniquePairs.getOrDefault(currNum, 0L);
 
-            uniquePairs.put(currNum, uniquePairs.getOrDefault(currNum, 0) + 1);
+            uniquePairs.put(currNum, uniquePairs.getOrDefault(currNum, 0L) + 1);
         }
 
         return result;
