@@ -38,6 +38,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0739-daily-temperatures](https://github.com/Harsh-rm/LeetCode/tree/master/0739-daily-temperatures) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
+| [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
 ## Backtracking
 |  |
@@ -127,6 +128,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
+| [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
 ## Sorting
 |  |
 | ------- |
@@ -210,6 +212,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
+| [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
 ## Dynamic Programming
 |  |
 | ------- |
