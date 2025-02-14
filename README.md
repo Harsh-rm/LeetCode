@@ -35,6 +35,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0560-subarray-sum-equals-k](https://github.com/Harsh-rm/LeetCode/tree/master/0560-subarray-sum-equals-k) |
 | [0561-array-partition](https://github.com/Harsh-rm/LeetCode/tree/master/0561-array-partition) |
 | [0648-replace-words](https://github.com/Harsh-rm/LeetCode/tree/master/0648-replace-words) |
+| [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [0720-longest-word-in-dictionary](https://github.com/Harsh-rm/LeetCode/tree/master/0720-longest-word-in-dictionary) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [0739-daily-temperatures](https://github.com/Harsh-rm/LeetCode/tree/master/0739-daily-temperatures) |
@@ -66,6 +67,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0532-k-diff-pairs-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0532-k-diff-pairs-in-an-array) |
 | [0560-subarray-sum-equals-k](https://github.com/Harsh-rm/LeetCode/tree/master/0560-subarray-sum-equals-k) |
 | [0648-replace-words](https://github.com/Harsh-rm/LeetCode/tree/master/0648-replace-words) |
+| [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [0720-longest-word-in-dictionary](https://github.com/Harsh-rm/LeetCode/tree/master/0720-longest-word-in-dictionary) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
@@ -177,6 +179,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0129-sum-root-to-leaf-numbers](https://github.com/Harsh-rm/LeetCode/tree/master/0129-sum-root-to-leaf-numbers) |
 | [0173-binary-search-tree-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0173-binary-search-tree-iterator) |
 | [0199-binary-tree-right-side-view](https://github.com/Harsh-rm/LeetCode/tree/master/0199-binary-tree-right-side-view) |
+| [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 ## Depth-First Search
 |  |
@@ -190,6 +193,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0199-binary-tree-right-side-view](https://github.com/Harsh-rm/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
+| [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 ## Binary Search Tree
@@ -218,6 +222,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0199-binary-tree-right-side-view](https://github.com/Harsh-rm/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
+| [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
