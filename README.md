@@ -28,6 +28,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0162-find-peak-element](https://github.com/Harsh-rm/LeetCode/tree/master/0162-find-peak-element) |
 | [0189-rotate-array](https://github.com/Harsh-rm/LeetCode/tree/master/0189-rotate-array) |
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
+| [0215-kth-largest-element-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0532-k-diff-pairs-in-an-array) |
@@ -105,10 +106,12 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0023-merge-k-sorted-lists](https://github.com/Harsh-rm/LeetCode/tree/master/0023-merge-k-sorted-lists) |
 | [0053-maximum-subarray](https://github.com/Harsh-rm/LeetCode/tree/master/0053-maximum-subarray) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
+| [0215-kth-largest-element-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 ## Heap (Priority Queue)
 |  |
 | ------- |
 | [0023-merge-k-sorted-lists](https://github.com/Harsh-rm/LeetCode/tree/master/0023-merge-k-sorted-lists) |
+| [0215-kth-largest-element-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 ## Merge Sort
 |  |
 | ------- |
@@ -135,6 +138,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0015-3sum](https://github.com/Harsh-rm/LeetCode/tree/master/0015-3sum) |
 | [0049-group-anagrams](https://github.com/Harsh-rm/LeetCode/tree/master/0049-group-anagrams) |
 | [0088-merge-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0088-merge-sorted-array) |
+| [0215-kth-largest-element-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0532-k-diff-pairs-in-an-array) |
 | [0561-array-partition](https://github.com/Harsh-rm/LeetCode/tree/master/0561-array-partition) |
@@ -312,4 +316,8 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
+## Quickselect
+|  |
+| ------- |
+| [0215-kth-largest-element-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 <!---LeetCode Topics End-->
