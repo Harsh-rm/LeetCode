@@ -31,9 +31,14 @@ class Solution {
 
             List<Integer> temp = curr.subordinates;
 
+            Optional.ofNullable(temp)
+                    .ifPresent(list -> list.forEach(num -> bfs.add(num)));
+
+/*
             for(Integer num: temp) {
                 bfs.add(num);
             }
+*/
         }
 
         return result;
