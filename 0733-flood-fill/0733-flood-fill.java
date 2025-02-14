@@ -1,51 +1,36 @@
 class Solution {
-    int[][] dirs;
+    private int[][] dirs;
+    private int m, n;
+    private int startColor;
 
     public int[][] floodFill(int[][] image, int sr, int sc, int color) {
-        //Base case - Avoid NullPointerException
         if (image == null) return new int[0][0];
-        //Check if the rows are empty or if the sc and sc are of color
+
         if (image.length == 0 || image[sr][sc] == color) return image;
 
-        //Initialize the directions array
         dirs = new int[][] {{-1, 0}, {0, 1}, {1, 0}, {0, -1}};
+        m = image.length;
+        n = image[0].length;
 
-        //Calculate the length of rows and cols and take note of the current color to perform Flood fill
-        int startColor = image[sr][sc];
-        int m = image.length;
-        int n = image[0].length;
-        
-        //Create the rows and cols queue to perform the BFS on the image matrix
-        Queue<Integer> rows = new LinkedList<>();
-        Queue<Integer> cols = new LinkedList<>();
+        startColor = image[sr][sc];
 
-        //Add the starting point sr and sc to the queue
-        rows.add(sr);
-        cols.add(sc);
+        helper(image, sr, sc, color);
 
-        //Start the Procedure of Flood Fill - change the color of the first pixel
+        return image;
+    }
+
+    private void helper(int[][] image, int sr, int sc, int color) {
+        if (image[sr][sc] == color) return;
+
         image[sr][sc] = color;
 
-        //Start the BFS approach - moving in four directions UP, RIGHT, DOWN, LEFT
-        while (!rows.isEmpty()) {
-            int currRow = rows.poll();
-            int currCol = cols.poll();
+        for (int[] dir: dirs) {
+            int nr = dir[0] + sr;
+            int nc = dir[1] + sc;            
 
-            for (int[] dir: dirs) {
-                int nr = dir[0] + currRow;
-                int nc = dir[1] + currCol;
-
-                //If you find that the new row and column color is the same as the first pixel's color then change it
-                if (nr >= 0 && nr < m && nc >= 0 && nc < n && image[nr][nc] == startColor) {
-                    image[nr][nc] = color;
-                    //And record the new row and column in your BFS queue
-                    rows.add(nr);
-                    cols.add(nc);
-                }
+            if (nr >= 0 && nr < m && nc >= 0 && nc < n && image[nr][nc] == startColor) {                
+                helper(image, nr, nc, color);
             }
         }
-
-        //Finally return the updated image from your flood procedure
-        return image;
     }
 }
