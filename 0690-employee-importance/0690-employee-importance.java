@@ -29,16 +29,8 @@ class Solution {
 
             result += curr.importance;
 
-            List<Integer> temp = curr.subordinates;
-
-            Optional.ofNullable(temp)
+            Optional.ofNullable(curr.subordinates)
                     .ifPresent(list -> list.forEach(num -> bfs.add(num)));
-
-/*
-            for(Integer num: temp) {
-                bfs.add(num);
-            }
-*/
         }
 
         return result;
