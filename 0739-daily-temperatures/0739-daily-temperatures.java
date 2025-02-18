@@ -1,24 +1,21 @@
 class Solution {
+    private int[] result;
+    
     public int[] dailyTemperatures(int[] temperatures) {
-        if (temperatures == null || temperatures.length == 0) return new int[] {};
+        if (temperatures == null || temperatures.length == 0) return new int[0];
 
+        Stack<Integer> lowerTemp = new Stack<>();
         int n = temperatures.length;
-        int[] result = new int[n];
-        Stack<Integer> MonotonicMaxStack = new Stack<>();
+        result = new int[n];
         
-        MonotonicMaxStack.push(n - 1);
-        for (int i = n - 2; i >= 0; i--) {
+        lowerTemp.push(0);
 
-            while(!MonotonicMaxStack.isEmpty() && temperatures[i] >= temperatures[MonotonicMaxStack.peek()]) {
-                MonotonicMaxStack.pop();
+        for (int i = 0; i < n; i++) {
+            while (!lowerTemp.isEmpty() && temperatures[i] > temperatures[lowerTemp.peek()]) {
+                int idx = lowerTemp.pop();
+                result[idx] = i - idx;
             }
-
-            if (!MonotonicMaxStack.isEmpty()) {
-                int index = MonotonicMaxStack.peek() - i;
-                result[i] = index;
-            }
-
-            MonotonicMaxStack.push(i);
+            lowerTemp.push(i);
         }
 
         return result;
