@@ -14,7 +14,7 @@ class Solution {
     private void helper(int[] candidates, int target, int index, List<Integer> path) {
         //Base case
         if (target == 0) {
-            result.add(path);
+            result.add(new ArrayList<>(path));
             return;
         }
 
@@ -22,10 +22,13 @@ class Solution {
             return;
         }
         //Logic
+        //Do not choose
         helper(candidates, target, index + 1, path);
+        //Choose
+        path.add(candidates[index]);
+        helper(candidates, target - candidates[index], index, path);
 
-        List<Integer> newPath = new ArrayList<>(path);
-        newPath.add(candidates[index]);
-        helper(candidates, target - candidates[index], index, newPath);
+        //Backtrack
+        path.remove(path.size() - 1);
     }
 }
