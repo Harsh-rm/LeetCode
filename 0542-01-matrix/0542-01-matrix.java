@@ -28,24 +28,18 @@ class Solution {
             }
         }
 
-        AtomicInteger distance = new AtomicInteger();
-
         while (!visited.isEmpty()) {            
-            int size = visited.size();
-            distance.getAndIncrement();
 
-            IntStream.range(0, size).forEach(i -> {
-                int[] curr = visited.poll();
+            int[] curr = visited.poll();
 
-                Arrays.stream(dirs)
-                        .map(dir -> new int[]{curr[0] + dir[0], curr[1] + dir[1]})
-                        .filter(isValidPosition())
-                        .filter(pos -> isNotVisited().test(pos, mat))
-                        .forEach(pos -> {
-                            visited.add(pos);
-                            mat[pos[0]][pos[1]] = distance.get();
-                        });
-            });
+            Arrays.stream(dirs)
+                    .map(dir -> new int[] {curr[0] + dir[0], curr[1] + dir[1]})
+                    .filter(isValidPosition())
+                    .filter(pos -> isNotVisited().test(pos, mat))
+                    .forEach(pos -> {
+                        visited.add(pos);
+                        mat[pos[0]][pos[1]] = mat[curr[0]][curr[1]] + 1;
+                    });
         }
     }
 
