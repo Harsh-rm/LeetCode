@@ -1,10 +1,13 @@
 class Solution {
     private List<List<Integer>> result;
+    private int[] dp;
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         result = new ArrayList<>();
 
         if (candidates == null || candidates.length == 0) return result;
+
+        dp = new int[target + 1];
 
         helper(candidates, target, 0, new ArrayList<>());
 
@@ -22,13 +25,10 @@ class Solution {
             return;
         }
         //Logic
-        //Do not choose
-        helper(candidates, target, index + 1, path);
-        //Choose
-        path.add(candidates[index]);
-        helper(candidates, target - candidates[index], index, path);
-
-        //Backtrack
-        path.remove(path.size() - 1);
+        for (int i = index; i < candidates.length; i++) {
+            List<Integer> newList = new ArrayList<>(path);
+            newList.add(candidates[i]);
+            helper(candidates, target - candidates[i], i, newList);
+        }
     }
 }
