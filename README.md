@@ -43,6 +43,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
+| [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
 ## Backtracking
 |  |
@@ -138,6 +139,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
+| [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 ## Sorting
 |  |
 | ------- |
@@ -229,6 +231,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
+| [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 ## Dynamic Programming
 |  |
 | ------- |
