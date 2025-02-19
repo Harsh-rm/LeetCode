@@ -1,13 +1,10 @@
 class Solution {
     private List<List<Integer>> result;
-    private int[] dp;
 
     public List<List<Integer>> combinationSum(int[] candidates, int target) {
         result = new ArrayList<>();
 
         if (candidates == null || candidates.length == 0) return result;
-
-        dp = new int[target + 1];
 
         helper(candidates, target, 0, new ArrayList<>());
 
