@@ -32,6 +32,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0532-k-diff-pairs-in-an-array) |
+| [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
 | [0560-subarray-sum-equals-k](https://github.com/Harsh-rm/LeetCode/tree/master/0560-subarray-sum-equals-k) |
 | [0561-array-partition](https://github.com/Harsh-rm/LeetCode/tree/master/0561-array-partition) |
 | [0648-replace-words](https://github.com/Harsh-rm/LeetCode/tree/master/0648-replace-words) |
@@ -134,6 +135,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
+| [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
 ## Sorting
@@ -222,6 +224,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0199-binary-tree-right-side-view](https://github.com/Harsh-rm/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
+| [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
 | [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
@@ -234,6 +237,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0118-pascals-triangle](https://github.com/Harsh-rm/LeetCode/tree/master/0118-pascals-triangle) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
+| [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
 ## Stack
 |  |
 | ------- |
