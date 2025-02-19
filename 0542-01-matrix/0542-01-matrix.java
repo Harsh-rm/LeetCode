@@ -28,25 +28,32 @@ class Solution {
             }
         }
 
-        int distance = 0;
+        AtomicInteger distance = new AtomicInteger();
 
         while (!visited.isEmpty()) {            
             int size = visited.size();
-            distance++;
+            distance.getAndIncrement();
 
-            for (int i = 0; i < size; i++) {
+            IntStream.range(0, size).forEach(i -> {
                 int[] curr = visited.poll();
 
-                for (int[] dir: dirs) {
-                    int nr = curr[0] + dir[0];
-                    int nc = curr[1] + dir[1];
-
-                    if (nr >= 0 && nr < m && nc >= 0 && nc < n && mat[nr][nc] == -1) {
-                        visited.add(new int[] {nr, nc});
-                        mat[nr][nc] = distance;
-                    }
-                }
-            }
+                Arrays.stream(dirs)
+                        .map(dir -> new int[]{curr[0] + dir[0], curr[1] + dir[1]})
+                        .filter(isValidPosition())
+                        .filter(pos -> isNotVisited().test(pos, mat))
+                        .forEach(pos -> {
+                            visited.add(pos);
+                            mat[pos[0]][pos[1]] = distance.get();
+                        });
+            });
         }
+    }
+
+    private Predicate<int[]> isValidPosition() {
+        return pos -> pos[0] >= 0 && pos[0] < m && pos[1] >= 0 && pos[1] < n;
+    }
+
+    private BiPredicate<int[], int[][]> isNotVisited() {
+        return (pos, mat) -> mat[pos[0]][pos[1]] == -1;
     }
 }
