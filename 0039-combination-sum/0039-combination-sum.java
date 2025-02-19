@@ -14,7 +14,7 @@ class Solution {
     private void helper(int[] candidates, int target, int index, List<Integer> path) {
         //Base case
         if (target == 0) {
-            result.add(new ArrayList<>(path));
+            result.add(path);
             return;
         }
 
