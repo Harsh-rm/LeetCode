@@ -1,36 +1,37 @@
 class Solution {
-    int i;
-    
+    private String result;
+
     public String decodeString(String s) {
-        if (s == null || s.length() == 0) return "";
+        result = "";
+        
+        if (s == null || s.length() == 0) return result;
 
-        StringBuilder currStr = new StringBuilder();
-        int num = 0;
+        Stack<Integer> numStack = new Stack<>();
+        Stack<StringBuilder> strStack = new Stack<>();
 
-        while (i < s.length()) {
-            Character ch = s.charAt(i);
+        StringBuilder str = new StringBuilder();
+        int currNum = 0;
 
-            if (Character.isDigit(ch)) {
-                num = num * 10 + Character.getNumericValue(ch);
-                i++;
+        for (int i = 0; i < s.length(); i++) {
+            if (s.charAt(i) == '[') {
+                numStack.push(currNum);
+                strStack.push(str);
+                currNum = 0;
+                str = new StringBuilder();
             }
-            else if (ch == '[') {
-                i++;
-                String decoded = decodeString(s);
-                //Pop operation from the inner encoded part that has to be appened to the currStr after multiplying it
-                currStr.append(decoded.repeat(num));
-                num = 0;
+            else if (s.charAt(i) == ']') {
+                int times = numStack.pop();
+                str.append(str.toString().repeat(times - 1));
+                str.insert(0, strStack.pop());                
             }
-            else if (ch == ']') {
-                i++;
-                return currStr.toString();
+            else if (Character.isDigit(s.charAt(i))) {
+                currNum = 10 * currNum + Character.getNumericValue(s.charAt(i));
             }
             else {
-                currStr.append(ch);
-                i++;
+                str.append(s.charAt(i));
             }
         }
 
-        return currStr.toString();
+        return str.toString();
     }
 }
