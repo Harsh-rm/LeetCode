@@ -16,7 +16,7 @@ class Solution {
         for (int i = 0; i < m; i ++) {
             for (int j = 0; j < n; j++) {
                 if (grid[i][j] == '1') {
-                    bfs(grid, i, j);
+                    dfs(grid, i, j);
                     result++;
                 }
             }
@@ -39,9 +39,31 @@ class Solution {
 
                 if (nr >= 0 && nr < m && nc >= 0 && nc < n && grid[nr][nc] == '1') {
                     processIsland.add(new int[] {nr, nc});
-                    grid[nr][nc] = '\u0000';                    
+                    grid[nr][nc] = '\u0000';
                 }
             }
         }
+    }
+
+    private void dfs(char[][] grid, int row, int col) {
+        //Base case
+        if (grid[row][col] == '\u0000') return;
+
+        grid[row][col] = '\u0000';
+
+        //Logic
+        Arrays.stream(dirs)
+                .map(dir -> new int[] {row + dir[0], col + dir[1]})
+                .filter(isWithinBounds())
+                .filter(pos -> isLand().test(pos, grid))
+                .forEach(pos -> dfs(grid, pos[0], pos[1]));
+    }
+
+    private Predicate<int[]> isWithinBounds() {
+        return pos -> pos[0] >= 0 && pos[0] < m && pos[1] >= 0 && pos[1] < n;
+    }
+
+    private BiPredicate<int[], char[][]> isLand() {
+        return (pos, grid) -> grid[pos[0]][pos[1]] == '1';
     }
 }
