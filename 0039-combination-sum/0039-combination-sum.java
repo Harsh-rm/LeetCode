@@ -23,9 +23,12 @@ class Solution {
         }
         //Logic
         for (int i = index; i < candidates.length; i++) {
-            List<Integer> newList = new ArrayList<>(path);
-            newList.add(candidates[i]);
-            helper(candidates, target - candidates[i], i, newList);
+            //action
+            path.add(candidates[i]);
+            //recursion
+            helper(candidates, target - candidates[i], i, path);
+            //backtrack
+            path.remove(path.size() - 1);
         }
     }
 }
