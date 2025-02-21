@@ -1,46 +1,48 @@
 class Solution {
-    List<String> result;
+    private List<String> result;
+    private String num;
+    private int target;
+    private char[] operands;
 
     public List<String> addOperators(String num, int target) {
-        result = new ArrayList<String>();
+        result = new ArrayList<>();
 
         if (num == null || num.length() == 0) return result;
 
-        helper(num, target, 0, "", 0, 0);
+        this.num = num;
+        this.target = target;
+        operands = new char[] {'+', '-', '*'};
+
+        helper(0, "", 0, 0);
 
         return result;
     }
 
-    public void helper(String num, int target, int index, String path, long calc, long tail) {
-        //base case
+    private void helper(int index, String path, long calculatedVal, long lastOperation) {
+        //Base case
         if (index == num.length()) {
-            if (calc == target) {
-                result.add(path);
+            if (calculatedVal == target) {
+                result.add(new String(path));
             }
             return;
         }
-        //logic to capture all sequences
-        for(int i = index; i < num.length(); i++) {
-            // handles expressions with preceding 0s i.e "01" => parseLong = 1
+        //Logic
+        for (int i = index; i < num.length(); i++) {
             if (index != i && num.charAt(index) == '0') continue;
 
-            //start from index 0 until index i for the substring
-            long curr =  Long.parseLong(num.substring(index, i + 1)); //captures substring until ith position
-            // capture a null path "" and start from the curr value of the substring
-            // i.e ("" + 1) , ("" + 12) , ("" + 123)
+            long curr = Long.parseLong(num.substring(index, i + 1));            
 
-            // to avoid adding operators in the beginning
-            if (index == 0) { 
-                helper(num, target, i + 1, path + curr, curr, curr);
-            } 
-            // start adding operators in between the expression
-            else { 
-                // + operator case
-                helper(num, target, i + 1, path + "+" + curr, calc + curr, +curr);
-                // - operator case
-                helper(num, target, i + 1, path + "-" + curr, calc - curr, -curr);
-                // * operator case
-                helper(num, target, i + 1, path + "*" + curr, calc - tail + tail * curr, tail*curr);
+            if (index == 0) {
+                helper(i + 1, path + curr, curr, curr);
+            }
+            else {
+                //+ operator case
+                helper(i + 1, path + operands[0] + curr, calculatedVal + curr, curr);
+                //- operator case
+                helper(i + 1, path + operands[1] + curr, calculatedVal - curr, -curr);
+                //* operator case
+                long temp = lastOperation * curr;
+                helper(i + 1, path + operands[2] + curr, calculatedVal - lastOperation + temp, temp);
             }
         }
     }
