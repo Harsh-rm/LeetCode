@@ -8,22 +8,24 @@ class Solution {
 
         List<Integer> emptyList = new ArrayList<>();
 
-        helper(nums, 0, emptyList);
+        result.add(emptyList);
+
+        helper(nums);
 
         return result;
     }
 
-    private void helper(int[] nums, int index, List<Integer> path) {
-        //Base case
-        result.add(new ArrayList<>(path));
-        //Logic
-        IntStream.range(index, nums.length).forEach( i -> {
-            //Action
-            path.add(nums[i]);
-            //Recursion
-            helper(nums, i + 1, path);
-            //Backtrack
-            path.remove(path.size() - 1);
-        });
+    private void helper(int[] nums) {
+        for (int i = 0; i < nums.length; i++) {
+            int size = result.size();
+
+            for (int j = 0; j < size; j++) {
+                List<Integer> newList = new ArrayList<>(result.get(j));
+
+                newList.add(nums[i]);
+
+                result.add(newList);
+            }
+        }
     }
 }
