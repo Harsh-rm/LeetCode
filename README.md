@@ -52,6 +52,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
 | [0113-path-sum-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0113-path-sum-ii) |
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
+| [0282-expression-add-operators](https://github.com/Harsh-rm/LeetCode/tree/master/0282-expression-add-operators) |
 ## Hash Table
 |  |
 | ------- |
@@ -83,6 +84,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
 | [0205-isomorphic-strings](https://github.com/Harsh-rm/LeetCode/tree/master/0205-isomorphic-strings) |
 | [0208-implement-trie-prefix-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0208-implement-trie-prefix-tree) |
+| [0282-expression-add-operators](https://github.com/Harsh-rm/LeetCode/tree/master/0282-expression-add-operators) |
 | [0290-word-pattern](https://github.com/Harsh-rm/LeetCode/tree/master/0290-word-pattern) |
 | [0394-decode-string](https://github.com/Harsh-rm/LeetCode/tree/master/0394-decode-string) |
 | [0409-longest-palindrome](https://github.com/Harsh-rm/LeetCode/tree/master/0409-longest-palindrome) |
@@ -268,6 +270,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0189-rotate-array](https://github.com/Harsh-rm/LeetCode/tree/master/0189-rotate-array) |
+| [0282-expression-add-operators](https://github.com/Harsh-rm/LeetCode/tree/master/0282-expression-add-operators) |
 | [0412-fizz-buzz](https://github.com/Harsh-rm/LeetCode/tree/master/0412-fizz-buzz) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
 ## Design
