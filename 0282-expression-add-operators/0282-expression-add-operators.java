@@ -27,8 +27,8 @@ class Solution {
             return;
         }
         //Logic
-        for (int i = index; i < num.length(); i++) {
-            if (index != i && num.charAt(index) == '0') continue;
+        IntStream.range(index, num.length()).forEach( i -> {
+            if (index != i && num.charAt(index) == '0') return;
 
             long curr = Long.parseLong(num.substring(index, i + 1));            
 
@@ -44,6 +44,6 @@ class Solution {
                 long temp = lastOperation * curr;
                 helper(i + 1, path + operands[2] + curr, calculatedVal - lastOperation + temp, temp);
             }
-        }
+        });
     }
 }
