@@ -345,4 +345,8 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0078-subsets](https://github.com/Harsh-rm/LeetCode/tree/master/0078-subsets) |
+## Database
+|  |
+| ------- |
+| [0175-combine-two-tables](https://github.com/Harsh-rm/LeetCode/tree/master/0175-combine-two-tables) |
 <!---LeetCode Topics End-->
