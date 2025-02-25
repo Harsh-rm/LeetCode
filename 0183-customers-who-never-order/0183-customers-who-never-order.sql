@@ -1,5 +1,8 @@
 /* Write your PL/SQL query statement below */
 SELECT c.name AS Customers
 FROM Customers c 
-LEFT JOIN Orders o ON c.id = o.customerId
-WHERE o.customerId IS NULL;
+WHERE NOT EXISTS (
+    SELECT 1
+    FROM Orders o
+    WHERE c.id = o.customerId
+);
