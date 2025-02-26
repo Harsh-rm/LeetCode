@@ -1,11 +1,7 @@
 /* Write your PL/SQL query statement below */
-SELECT id 
-FROM (
-    SELECT id, recordDate, temperature, 
-            LAG(temperature, 1) OVER (ORDER BY recordDate) as previousDayTemp,
-            LAG(recordDate) OVER (ORDER BY recordDate) AS previousDayDate
-    FROM Weather
-) WeatherLagTable
-WHERE WeatherLagTable.temperature > WeatherLagTable.previousDayTemp 
-        AND WeatherLagTable.recordDate = WeatherLagTable.previousDayDate + INTERVAL '1' DAY
-ORDER BY id;
+SELECT w1.id 
+FROM Weather w1
+JOIN Weather w2 
+ON w1.recordDate = w2.recordDate + INTERVAL '1' DAY
+WHERE w1.temperature > w2.temperature 
+ORDER BY w1.id;
