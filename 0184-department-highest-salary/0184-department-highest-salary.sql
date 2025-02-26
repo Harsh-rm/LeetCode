@@ -1,5 +1,5 @@
 /* Write your PL/SQL query statement below */
-SELECT d.name AS Department, e.name AS Employee, e.salary AS Salary
+SELECT DISTINCT d.name AS Department, e.name AS Employee, e.salary AS Salary
 FROM Employee e
 JOIN Department d ON e.departmentId = d.id
 JOIN (SELECT e.departmentId, MAX(e.salary) AS MaxSalary
