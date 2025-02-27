@@ -18,8 +18,8 @@ class Solution {
             }
         }
 
-        result = true;
+        //result = true;
 
-        return result;
+        return !result;
     }
 }
