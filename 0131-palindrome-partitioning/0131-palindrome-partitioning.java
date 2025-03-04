@@ -1,38 +1,36 @@
 class Solution {
     private List<List<String>> result;
-    private String s;
+    //private String s;
 
     public List<List<String>> partition(String s) {
         result = new ArrayList<>();
 
         if (s == null || s.length() == 0) return result;
 
-        this.s = s;
+        //this.s = s;
 
-        helper(0, new ArrayList<>());
+        helper(s, new ArrayList<>());
 
         return result;
     }
 
-    private void helper(int index, List<String> path) {
+    private void helper(String s, List<String> path) {
         //Base case
-        if (index == s.length()) {
+        if (s.length() == 0) {
             result.add(new ArrayList<>(path));
             return;
         }
         //Logic
-        for (int i = index; i < s.length(); i++) {
-            if (isPalindrome(s, index, i)) {                
+        for (int i = 0; i < s.length(); i++) {
+            if (isPalindrome(s, 0, i)) {                
                 //Action
-                //path.add(s.substring(index, i + 1));
-                List<String> newList = new ArrayList<>(path);
-                newList.add(s.substring(index, i + 1));
+                path.add(s.substring(0, i + 1));
 
                 //Recurse
-                helper(i + 1, newList);
+                helper(s.substring(i + 1), path);
 
                 //Backtrack
-                //path.remove(path.size() - 1);
+                path.remove(path.size() - 1);
             }
         }
     }
