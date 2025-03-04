@@ -24,13 +24,15 @@ class Solution {
         for (int i = index; i < s.length(); i++) {
             if (isPalindrome(s, index, i)) {                
                 //Action
-                path.add(s.substring(index, i + 1));
+                //path.add(s.substring(index, i + 1));
+                List<String> newList = new ArrayList<>(path);
+                newList.add(s.substring(index, i + 1));
+
                 //Recurse
-                helper(i + 1, path);
+                helper(i + 1, newList);
+
                 //Backtrack
-                path.remove(path.size() - 1);
-            } else {
-                return;
+                //path.remove(path.size() - 1);
             }
         }
     }
