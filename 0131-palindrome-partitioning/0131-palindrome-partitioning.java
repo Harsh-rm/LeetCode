@@ -8,12 +8,12 @@ class Solution {
         if (s == null || s.length() == 0) return result;
 
         //this.s = s;
-
+        //Without Index - start the substring from the next index
         helper(s, new ArrayList<>());
 
         return result;
     }
-
+    
     private void helper(String s, List<String> path) {
         //Base case
         if (s.length() == 0) {
