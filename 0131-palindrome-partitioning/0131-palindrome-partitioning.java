@@ -1,41 +1,55 @@
 class Solution {
-    List<List<String>> result;
+    private List<List<String>> result;
+    private String s;
+
     public List<List<String>> partition(String s) {
         result = new ArrayList<>();
+
         if (s == null || s.length() == 0) return result;
-        
-        helper(s, 0, new ArrayList<>());
-        
+
+        this.s = s;
+
+        helper(0, new ArrayList<>());
+
         return result;
     }
-    
-    private void helper(String s, int index, List<String> path) {
-        //base
-        if(index == s.length()) {
+
+    private void helper(int index, List<String> path) {
+        //Base case
+        if (index == s.length()) {
             result.add(new ArrayList<>(path));
             return;
         }
         //Logic
         for (int i = index; i < s.length(); i++) {
-            if(isPalindrome(s, index, i)) {
-                //action
+            if (isPalindrome(s, index, i)) {                
+                //Action
                 path.add(s.substring(index, i + 1));
-                //recurse
-                helper(s, i + 1, path);
-                //backtrack
+                //Recurse
+                helper(i + 1, path);
+                //Backtrack
                 path.remove(path.size() - 1);
+            } else {
+                return;
             }
         }
     }
-    
-    private boolean isPalindrome(String s, int left, int right) {
-        while(left<=right) {
-            if(s.charAt(left) != s.charAt(right)) {
-                return false;
+
+    private boolean isPalindrome(String s, int i, int j) {
+        boolean flag = true;
+
+        while (i <= j) {
+            char left = s.charAt(i);
+            char right = s.charAt(j);
+
+            if (left != right) {
+                flag = false;
+                return flag;
             }
-            left++;
-            right--;
+
+            i++; j--;
         }
-        return true;
+
+        return flag;
     }
 }
