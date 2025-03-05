@@ -45,6 +45,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0739-daily-temperatures](https://github.com/Harsh-rm/LeetCode/tree/master/0739-daily-temperatures) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
+| [1025-minimum-cost-for-tickets](https://github.com/Harsh-rm/LeetCode/tree/master/1025-minimum-cost-for-tickets) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
 | [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
@@ -253,6 +254,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
 | [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
+| [1025-minimum-cost-for-tickets](https://github.com/Harsh-rm/LeetCode/tree/master/1025-minimum-cost-for-tickets) |
 ## Stack
 |  |
 | ------- |
