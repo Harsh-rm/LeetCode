@@ -29,12 +29,12 @@ class Solution {
             return;
         }
         //Logic
-        for (int i = 0; i < n; i++) {
+        IntStream.range(0, n).forEach(i -> {
             //Action
             String tempRow = path.get(index);
 
             if (isNotSafeCol.contains(i) || isNotSafeDiagonal(index, i, path)) {
-                continue;
+                return;
             }
 
             String newRow = tempRow.substring(0, i) + 'Q' + tempRow.substring(i + 1);
@@ -47,35 +47,14 @@ class Solution {
             //Backtrack
             path.set(index, tempRow);
             isNotSafeCol.remove(i);
-        }
+        });
     }
 
     private boolean isNotSafeDiagonal(int row, int col, List<String> path) {
-        boolean flag = false;
-
-        //Left Diagonal
-        int newRow = row - 1, newCol = col - 1;
-        while (newRow >= 0 && newCol >= 0) {
-            String tempRow = path.get(newRow);
-            if (tempRow.charAt(newCol) == 'Q') {
-                flag = true;
-                return flag;
-            }
-            newRow--; newCol--;
-        }
-
-        //Right Diagonal
-        newRow = row - 1;
-        newCol = col + 1;
-        while (newRow >= 0 && newCol < n) {
-            String tempRow = path.get(newRow);
-            if (tempRow.charAt(newCol) == 'Q') {
-                flag = true;
-                return flag;
-            }
-            newRow--; newCol++;
-        }
-
-        return flag;
+    return IntStream.range(1, row + 1)
+        .anyMatch(i -> 
+            (col - i >= 0 && path.get(row - i).charAt(col - i) == 'Q') ||  // Left Diagonal
+            (col + i < n && path.get(row - i).charAt(col + i) == 'Q') // Right Diagonal
+        );
     }
 }
