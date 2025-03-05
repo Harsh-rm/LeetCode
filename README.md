@@ -17,6 +17,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0039-combination-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0039-combination-sum) |
 | [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0049-group-anagrams](https://github.com/Harsh-rm/LeetCode/tree/master/0049-group-anagrams) |
+| [0051-n-queens](https://github.com/Harsh-rm/LeetCode/tree/master/0051-n-queens) |
 | [0053-maximum-subarray](https://github.com/Harsh-rm/LeetCode/tree/master/0053-maximum-subarray) |
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0078-subsets](https://github.com/Harsh-rm/LeetCode/tree/master/0078-subsets) |
@@ -51,6 +52,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0039-combination-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0039-combination-sum) |
+| [0051-n-queens](https://github.com/Harsh-rm/LeetCode/tree/master/0051-n-queens) |
 | [0078-subsets](https://github.com/Harsh-rm/LeetCode/tree/master/0078-subsets) |
 | [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
 | [0113-path-sum-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0113-path-sum-ii) |
