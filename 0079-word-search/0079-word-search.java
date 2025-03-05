@@ -1,51 +1,60 @@
 class Solution {
-    int[][] dirs = new int[][] {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
-    int m, n;
-
+    private String word;
+    private char[][] board;
+    private int[][] dirs;
+    private int m, n;
+    private boolean result;
+    
     public boolean exist(char[][] board, String word) {
-        if (word == null || word.length() == 0) return false;
+        result = false;
 
-        m = board.length;
-        n = board[0].length;
+        if (board == null || board.length == 0) return result;
+
+        this.word = word;
+        this.board = board;
+        this.dirs = new int[][] {{0, 1}, {1, 0}, {0, -1}, {-1, 0}};
+        this.m = board.length;
+        this.n = board[0].length;
 
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 if (board[i][j] == word.charAt(0)) {                    
-                    if (dfs(board, word, 1, i, j)) {
-                        return true;
-                    }
+                    dfs(1, i, j);
                 }
+                if (this.result) break;
             }
         }
 
-        return false;   
+        return this.result;
     }
 
-    private boolean dfs(char[][] board, String word, int index, int i, int j) {
+    private void dfs(int index, int row, int col) {
         //Base case
-        if (index == word.length()) return true;
-        
+        if (index == word.length()) {
+            this.result = true;
+            return;
+        }
+        //Logic
         //Action
-        char temp = board[i][j];
-        board[i][j] = '\u0000';
+        char temp = board[row][col];
+        board[row][col] = '\u0000';
 
         //Recurse
         for (int[] dir: dirs) {
-            int nr = i + dir[0];
-            int nc = j + dir[1];
+            int nr = row + dir[0];
+            int nc = col + dir[1];
 
-            if (nr >= 0 && nr < m && nc >= 0 && nc < n) {
-                if (board[nr][nc] == word.charAt(index)) {
-                    if (dfs(board, word, index + 1, nr, nc)) {
-                        return true;
-                    }
-                }
+            if (nr >= 0 && nr < m && nc >= 0 && nc < n && board[nr][nc] == word.charAt(index)) {
+
+
+                dfs(index + 1, nr, nc);
+
+                
             }
+
+            if (result) break;
         }
 
-        //Backtrack
-        board[i][j] = temp;
-
-        return false;
+        board[row][col] = temp;
     }
 }
