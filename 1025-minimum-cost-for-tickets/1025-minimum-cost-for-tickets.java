@@ -10,7 +10,7 @@ class Solution {
 
         set = Arrays.stream(days).boxed().collect(Collectors.toSet());
 
-        for (int i = 1; i < dp.length; i++) {
+        IntStream.range(1, dp.length).forEach(i -> {
             if (set.contains(i)) {
                 int case1 = dp[i - 1] + costs[0];
                 int case7 = dp[Math.max(0, i - 7)] + costs[1];
@@ -20,7 +20,7 @@ class Solution {
             } else {
                 dp[i] = dp[i - 1];
             }
-        }
+        });
 
         return dp[dp.length - 1];
     }
