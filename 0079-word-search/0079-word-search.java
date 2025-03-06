@@ -46,13 +46,11 @@ class Solution {
 
             if (nr >= 0 && nr < m && nc >= 0 && nc < n && board[nr][nc] == word.charAt(index)) {
 
-
                 dfs(index + 1, nr, nc);
 
-                
             }
 
-            if (result) break;
+            if (this.result) break;
         }
 
         board[row][col] = temp;
