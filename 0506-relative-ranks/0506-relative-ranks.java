@@ -32,27 +32,19 @@ class Solution {
             maxHeap.offer(new int[] {score[i], i});
         });
 
-        int[] tempIdx = maxHeap.poll();
-        result[tempIdx[1]] = Ranks.FIRST.getMessage();
+        IntStream.range(0, n).forEach(i -> {
+            int[] tempIdx = maxHeap.poll();
 
-        if (!maxHeap.isEmpty()) {
-            tempIdx = maxHeap.poll();
-            result[tempIdx[1]] = Ranks.SECOND.getMessage();
-        }
+            if (i == 0) result[tempIdx[1]] = Ranks.FIRST.getMessage();
 
-        if (!maxHeap.isEmpty()) {
-            tempIdx = maxHeap.poll();
-            result[tempIdx[1]] = Ranks.THIRD.getMessage();
-        }
+            else if (i == 1) result[tempIdx[1]] = Ranks.SECOND.getMessage();
 
-        int rank = 4;
-        while (!maxHeap.isEmpty()) {
-            tempIdx = maxHeap.poll();
+            else if (i == 2) result[tempIdx[1]] = Ranks.THIRD.getMessage();
 
-            result[tempIdx[1]] = Integer.toString(rank);
-
-            rank++;
-        }
+            else {
+                result[tempIdx[1]] = Integer.toString(i + 1);
+            }
+        });
 
         return result;
     }
