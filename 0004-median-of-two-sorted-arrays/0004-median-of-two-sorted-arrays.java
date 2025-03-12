@@ -1,47 +1,45 @@
-class Solution {
-    private int[] mergedArray;
+ class Solution {
     private double result;
+    private int n1, n2, total;
+    private int target;
 
     public double findMedianSortedArrays(int[] nums1, int[] nums2) {
-        result = 0;
+        if (nums1.length > nums2.length) {
+            return findMedianSortedArrays(nums2, nums1);
+        }
 
-        if (nums1.length == 0 && nums2.length == 0) return result;
+        n1 = nums1.length;
+        n2 = nums2.length;
+        total = n1 + n2;
+        target = (total + 1) / 2;
+        
+        int left = 0, right = n1;
 
-        int m = nums1.length;
-        int n = nums2.length;
-        mergedArray = new int[m + n];
+        while (true) {
+            int take1 = left + (right - left) / 2;
+            int take2 = target - take1;
 
-        int p1 = 0, p2 = 0, p3 = 0;
+            int l1 = (take1 == 0) ? Integer.MIN_VALUE : nums1[take1 - 1];
+            int r1 = (take1 == n1) ? Integer.MAX_VALUE : nums1[take1];
+            int l2 = (take2 == 0) ? Integer.MIN_VALUE : nums2[take2 - 1];
+            int r2 = (take2 == n2) ? Integer.MAX_VALUE : nums2[take2];
 
-        while (p1 < m && p2 < n) {
-            if (nums1[p1] < nums2[p2]) {
-                mergedArray[p3] = nums1[p1];
-                p1++;
-            } else {
-                mergedArray[p3] = nums2[p2];
-                p2++;
+            if (l1 > r2) {
+                right = take1 - 1;                
+                continue;
             }
-            p3++;
-        }
 
-        while (p2 < n) {
-            mergedArray[p3] = nums2[p2];
-            p2++; p3++;
-        }
+            if (r1 < l2) {
+                left = take1 + 1;
+                continue;
+            }
 
-        while (p1 < m) {
-            mergedArray[p3] = nums1[p1];
-            p1++; p3++;
+            result = Math.max(l1, l2);
+            if (total % 2 == 1) {
+                return result;
+            } else {
+                return (result + Math.min(r1, r2)) / 2.0;
+            }
         }
-
-        if ((m + n) % 2 == 0) {
-            int temp = (m + n) / 2;            
-            result = (double) (mergedArray[temp - 1] + mergedArray[temp]) / 2;
-        } else {
-            int temp = (m + n) / 2;
-            result = mergedArray[temp];
-        }
-
-        return result;                
     }
 }
