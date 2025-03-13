@@ -2,58 +2,72 @@ class Trie {
 
     class TrieNode {
         TrieNode[] children;
-        boolean isEnd;
+        boolean isWord;
+        List<String> prefixWord;
 
         public TrieNode() {
             children = new TrieNode[26];
+            isWord = false;
+            prefixWord = new ArrayList<>();
         }
     }
 
     TrieNode root;
 
     public Trie() {
-        root = new TrieNode();
+        this.root = new TrieNode();
     }
-    
+
     public void insert(String word) {
+        int n = word.length();
         TrieNode curr = root;
 
-        for (int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < n; i++) {
             char c = word.charAt(i);
 
             if (curr.children[c - 'a'] == null) {
                 curr.children[c - 'a'] = new TrieNode();
             }
 
+            curr.prefixWord.add(word);
             curr = curr.children[c - 'a'];
         }
-        curr.isEnd = true;
+
+        curr.isWord = true;
     }
-    
+
     public boolean search(String word) {
+        boolean flag = false;
+        int n = word.length();
         TrieNode curr = root;
 
-        for (int i = 0; i < word.length(); i++) {
+        for (int i = 0; i < n; i++) {
             char c = word.charAt(i);
 
             if (curr.children[c - 'a'] == null) {
-                return false;
+                //flag = true;
+                return flag;
             } else {
                 curr = curr.children[c - 'a'];
             }
         }
 
-        return curr.isEnd;
+        //System.out.println(curr.prefixWord.contains(word));
+
+        return curr.isWord;
     }
-    
+
     public boolean startsWith(String prefix) {
+        boolean flag = false;
+        int n = prefix.length();
         TrieNode curr = root;
-        
-        for (int i = 0; i < prefix.length(); i++) {
+
+        for (int i = 0; i < n; i++) {
             char c = prefix.charAt(i);
 
             if (curr.children[c - 'a'] == null) {
-                return false;
+                //flag = true;
+                return flag;
             } else {
                 curr = curr.children[c - 'a'];
             }
