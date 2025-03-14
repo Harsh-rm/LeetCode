@@ -28,9 +28,9 @@ class Trie {
             if (curr.children[c - 'a'] == null) {
                 curr.children[c - 'a'] = new TrieNode();
             }
-
-            curr.prefixWord.add(word);
+            
             curr = curr.children[c - 'a'];
+            curr.prefixWord.add(word);
         }
 
         curr.isWord = true;
@@ -45,14 +45,13 @@ class Trie {
             char c = word.charAt(i);
 
             if (curr.children[c - 'a'] == null) {
-                //flag = true;
                 return flag;
             } else {
                 curr = curr.children[c - 'a'];
             }
         }
 
-        //System.out.println(curr.prefixWord.contains(word));
+        System.out.println(curr.prefixWord);
 
         return curr.isWord;
     }
@@ -66,14 +65,14 @@ class Trie {
             char c = prefix.charAt(i);
 
             if (curr.children[c - 'a'] == null) {
-                //flag = true;
                 return flag;
             } else {
                 curr = curr.children[c - 'a'];
             }
         }
 
-        return true;
+        flag = true;
+        return flag;
     }
 }
 
