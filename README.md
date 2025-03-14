@@ -391,6 +391,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0185-department-top-three-salaries](https://github.com/Harsh-rm/LeetCode/tree/master/0185-department-top-three-salaries) |
 | [0196-delete-duplicate-emails](https://github.com/Harsh-rm/LeetCode/tree/master/0196-delete-duplicate-emails) |
 | [0197-rising-temperature](https://github.com/Harsh-rm/LeetCode/tree/master/0197-rising-temperature) |
+| [1181-game-play-analysis-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1181-game-play-analysis-iii) |
 ## Bucket Sort
 |  |
 | ------- |
