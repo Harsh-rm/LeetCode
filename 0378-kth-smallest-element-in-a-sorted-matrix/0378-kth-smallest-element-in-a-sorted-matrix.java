@@ -52,7 +52,7 @@ class Solution {
         });
 
         HeapNode currElement = minHeap.peek();
-        for (int i = 0; i < k; i++) {
+        while(k-- > 0) {
             currElement = minHeap.poll();
             int currRow = currElement.getRow();
             int nextCol = currElement.getCol() + 1;
@@ -62,6 +62,6 @@ class Solution {
             }
         }
 
-        return currElement.value;
+        return currElement.getValue();
     }
 }
