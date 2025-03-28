@@ -70,6 +70,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0003-longest-substring-without-repeating-characters](https://github.com/Harsh-rm/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0036-valid-sudoku](https://github.com/Harsh-rm/LeetCode/tree/master/0036-valid-sudoku) |
 | [0049-group-anagrams](https://github.com/Harsh-rm/LeetCode/tree/master/0049-group-anagrams) |
+| [0076-minimum-window-substring](https://github.com/Harsh-rm/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0105-construct-binary-tree-from-preorder-and-inorder-traversal](https://github.com/Harsh-rm/LeetCode/tree/master/0105-construct-binary-tree-from-preorder-and-inorder-traversal) |
 | [0127-word-ladder](https://github.com/Harsh-rm/LeetCode/tree/master/0127-word-ladder) |
 | [0146-lru-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0146-lru-cache) |
@@ -93,6 +94,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Harsh-rm/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0049-group-anagrams](https://github.com/Harsh-rm/LeetCode/tree/master/0049-group-anagrams) |
+| [0076-minimum-window-substring](https://github.com/Harsh-rm/LeetCode/tree/master/0076-minimum-window-substring) |
 | [0079-word-search](https://github.com/Harsh-rm/LeetCode/tree/master/0079-word-search) |
 | [0127-word-ladder](https://github.com/Harsh-rm/LeetCode/tree/master/0127-word-ladder) |
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
@@ -109,6 +111,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Harsh-rm/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
+| [0076-minimum-window-substring](https://github.com/Harsh-rm/LeetCode/tree/master/0076-minimum-window-substring) |
 ## Linked List
 |  |
 | ------- |
