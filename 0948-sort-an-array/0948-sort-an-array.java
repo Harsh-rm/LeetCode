@@ -30,9 +30,7 @@ class Solution {
 
         IntStream.iterate(arrayLength - 1, i -> i > 0, i -> i - 1)
                 .forEach(i -> {
-                    int temp = nums[0];
-                    nums[0] = nums[i];
-                    nums[i] = temp;
+                    swap(nums, 0, i);
 
                     heapify(nums, 0, i);
                 });
@@ -56,11 +54,17 @@ class Solution {
         }
 
         if (largestElementIndex != index) {
-            int temp = nums[largestElementIndex];
-            nums[largestElementIndex] = nums[index];
-            nums[index] = temp;
+            swap(nums, index, largestElementIndex);
 
             heapify(nums, largestElementIndex, heapSize);
         }
+    }
+
+    private void swap(int[] nums, int first, int last) {
+        int temp = nums[first];
+        nums[first] = nums[last];
+        nums[last] = temp;
+
+        return;
     }
 }
