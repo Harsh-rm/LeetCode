@@ -29,15 +29,16 @@ class PeekingIterator implements Iterator<Integer> {
             throw new NoSuchElementException();
         }
 
-	    Integer temp = peekNumber;
-
-        peekNumber = iterator.hasNext()? iterator.next() : null;
-
-        return temp;
+	    return replaceAndReturn(peekNumber, () -> peekNumber = iterator.hasNext()? iterator.next() : null);
 	}
 	
 	@Override
 	public boolean hasNext() {
 	    return peekNumber != null;
 	}
+
+    private Integer replaceAndReturn(Integer oldValue, Runnable updater) {
+        updater.run();
+        return oldValue;
+    }
 }
