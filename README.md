@@ -35,6 +35,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0215-kth-largest-element-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0253-meeting-rooms-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0253-meeting-rooms-ii) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
+| [0284-peeking-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0284-peeking-iterator) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0506-relative-ranks](https://github.com/Harsh-rm/LeetCode/tree/master/0506-relative-ranks) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
@@ -325,6 +326,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0173-binary-search-tree-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0173-binary-search-tree-iterator) |
 | [0208-implement-trie-prefix-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0208-implement-trie-prefix-tree) |
 | [0232-implement-queue-using-stacks](https://github.com/Harsh-rm/LeetCode/tree/master/0232-implement-queue-using-stacks) |
+| [0284-peeking-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0284-peeking-iterator) |
 | [0460-lfu-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0460-lfu-cache) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
@@ -349,6 +351,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0173-binary-search-tree-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0173-binary-search-tree-iterator) |
+| [0284-peeking-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0284-peeking-iterator) |
 ## Queue
 |  |
 | ------- |
