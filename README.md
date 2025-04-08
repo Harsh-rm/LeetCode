@@ -34,6 +34,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0215-kth-largest-element-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0253-meeting-rooms-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0253-meeting-rooms-ii) |
+| [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 | [0284-peeking-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0284-peeking-iterator) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
@@ -78,6 +79,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0160-intersection-of-two-linked-lists](https://github.com/Harsh-rm/LeetCode/tree/master/0160-intersection-of-two-linked-lists) |
 | [0205-isomorphic-strings](https://github.com/Harsh-rm/LeetCode/tree/master/0205-isomorphic-strings) |
 | [0208-implement-trie-prefix-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0208-implement-trie-prefix-tree) |
+| [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 | [0290-word-pattern](https://github.com/Harsh-rm/LeetCode/tree/master/0290-word-pattern) |
 | [0409-longest-palindrome](https://github.com/Harsh-rm/LeetCode/tree/master/0409-longest-palindrome) |
 | [0460-lfu-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0460-lfu-cache) |
@@ -157,6 +159,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0074-search-a-2d-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0074-search-a-2d-matrix) |
 | [0153-find-minimum-in-rotated-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0153-find-minimum-in-rotated-sorted-array) |
 | [0162-find-peak-element](https://github.com/Harsh-rm/LeetCode/tree/master/0162-find-peak-element) |
+| [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0532-k-diff-pairs-in-an-array) |
 ## Matrix
@@ -179,6 +182,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0088-merge-sorted-array](https://github.com/Harsh-rm/LeetCode/tree/master/0088-merge-sorted-array) |
 | [0215-kth-largest-element-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0215-kth-largest-element-in-an-array) |
 | [0253-meeting-rooms-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0253-meeting-rooms-ii) |
+| [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0506-relative-ranks](https://github.com/Harsh-rm/LeetCode/tree/master/0506-relative-ranks) |
@@ -315,6 +319,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0189-rotate-array](https://github.com/Harsh-rm/LeetCode/tree/master/0189-rotate-array) |
+| [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 | [0282-expression-add-operators](https://github.com/Harsh-rm/LeetCode/tree/master/0282-expression-add-operators) |
 | [0412-fizz-buzz](https://github.com/Harsh-rm/LeetCode/tree/master/0412-fizz-buzz) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
@@ -391,6 +396,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0078-subsets](https://github.com/Harsh-rm/LeetCode/tree/master/0078-subsets) |
+| [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 ## Database
 |  |
 | ------- |
