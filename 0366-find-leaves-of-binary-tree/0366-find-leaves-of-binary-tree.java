@@ -22,7 +22,12 @@ class Solution {
 
         if (root == null) return result;
 
-        helper(root);
+        try {
+            helper(root);
+        }
+        catch(RuntimeException e) {
+            System.out.println("Found an exception in findLeaves method: " + e);
+        }
 
         return result;
     }
