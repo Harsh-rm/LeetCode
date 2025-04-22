@@ -40,6 +40,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 | [0284-peeking-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0284-peeking-iterator) |
+| [0322-coin-change](https://github.com/Harsh-rm/LeetCode/tree/master/0322-coin-change) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0506-relative-ranks](https://github.com/Harsh-rm/LeetCode/tree/master/0506-relative-ranks) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
@@ -288,6 +289,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0199-binary-tree-right-side-view](https://github.com/Harsh-rm/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
+| [0322-coin-change](https://github.com/Harsh-rm/LeetCode/tree/master/0322-coin-change) |
 | [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
 | [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
@@ -303,6 +305,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0118-pascals-triangle](https://github.com/Harsh-rm/LeetCode/tree/master/0118-pascals-triangle) |
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
+| [0322-coin-change](https://github.com/Harsh-rm/LeetCode/tree/master/0322-coin-change) |
 | [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
 | [1025-minimum-cost-for-tickets](https://github.com/Harsh-rm/LeetCode/tree/master/1025-minimum-cost-for-tickets) |
 ## Stack
