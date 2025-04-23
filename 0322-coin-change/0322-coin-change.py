@@ -1,13 +1,33 @@
 class Solution:
     def coinChange(self, coins: List[int], amount: int) -> int:
-        if coins == None or len(coins) == 0 or amount == 0:
+        if not coins or amount == 0:
             return 0
 
-        dp = [amount + 1] * (amount + 1)
-        dp[0] = 0
+        memo = {}
 
-        for coin in coins:
-            for j in range(coin, amount + 1):
-                dp[j] = min(dp[j], dp[j - coin] + 1)
+        def helper(amount: int, index: int) -> int:
+            if amount == 0:
+                return 0
+            
+            if amount < 0 or index == len(coins):
+                return float('inf')
 
-        return -1 if dp[amount] > amount else dp[amount]
+            if (amount, index) in memo:
+                return memo[(amount, index)]
+
+            case0 = helper(amount, index + 1) 
+
+            case1 = helper(amount - coins[index], index)
+            if case1 != float('inf'):
+                case1 += 1
+
+            memo[(amount, index)] = min(case0, case1)
+
+            return memo[(amount, index)]
+
+        result = helper(amount, 0)
+
+        return -1 if result == float('inf') else result
+
+
+            
