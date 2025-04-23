@@ -3,10 +3,7 @@ class Solution:
         if not nums or len(nums) == 0:
             return 0
 
-        maxValue = 0
-
-        for i in range(len(nums)):
-            maxValue = max(maxValue, nums[i])
+        maxValue = max(nums)
 
         dp = [0] * (maxValue + 1)
 
