@@ -43,6 +43,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0322-coin-change](https://github.com/Harsh-rm/LeetCode/tree/master/0322-coin-change) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0506-relative-ranks](https://github.com/Harsh-rm/LeetCode/tree/master/0506-relative-ranks) |
+| [0518-coin-change-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0518-coin-change-ii) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0532-k-diff-pairs-in-an-array) |
 | [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
@@ -306,6 +307,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
 | [0322-coin-change](https://github.com/Harsh-rm/LeetCode/tree/master/0322-coin-change) |
+| [0518-coin-change-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
 | [1025-minimum-cost-for-tickets](https://github.com/Harsh-rm/LeetCode/tree/master/1025-minimum-cost-for-tickets) |
 ## Stack
