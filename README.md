@@ -55,6 +55,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0720-longest-word-in-dictionary](https://github.com/Harsh-rm/LeetCode/tree/master/0720-longest-word-in-dictionary) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [0739-daily-temperatures](https://github.com/Harsh-rm/LeetCode/tree/master/0739-daily-temperatures) |
+| [0740-delete-and-earn](https://github.com/Harsh-rm/LeetCode/tree/master/0740-delete-and-earn) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 | [0948-sort-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0948-sort-an-array) |
@@ -95,6 +96,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0648-replace-words](https://github.com/Harsh-rm/LeetCode/tree/master/0648-replace-words) |
 | [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [0720-longest-word-in-dictionary](https://github.com/Harsh-rm/LeetCode/tree/master/0720-longest-word-in-dictionary) |
+| [0740-delete-and-earn](https://github.com/Harsh-rm/LeetCode/tree/master/0740-delete-and-earn) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
@@ -311,6 +313,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0322-coin-change](https://github.com/Harsh-rm/LeetCode/tree/master/0322-coin-change) |
 | [0518-coin-change-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
+| [0740-delete-and-earn](https://github.com/Harsh-rm/LeetCode/tree/master/0740-delete-and-earn) |
 | [1025-minimum-cost-for-tickets](https://github.com/Harsh-rm/LeetCode/tree/master/1025-minimum-cost-for-tickets) |
 ## Stack
 |  |
