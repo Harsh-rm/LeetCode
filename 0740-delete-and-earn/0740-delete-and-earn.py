@@ -13,8 +13,6 @@ class Solution:
         for i in range(len(nums)):
             dp[nums[i]] += nums[i]
 
-        print(dp)
-
         skip = 0
         take = dp[0]
         for i in range(1, maxValue + 1):
