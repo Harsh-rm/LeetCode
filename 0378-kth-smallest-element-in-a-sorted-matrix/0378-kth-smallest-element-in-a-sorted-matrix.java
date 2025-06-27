@@ -1,67 +1,55 @@
 class Solution {
 
-    class HeapNode {
-        private int value;
-        private int row;
-        private int col;
-
-        public HeapNode(int value, int row, int col) {
-            this.value = value;
-            this.row = row;
-            this.col = col;
-        }
-
-        public int getValue() {
-            return this.value;
-        }
-
-        public int getRow() {
-            return this.row;
-        }
-
-        public int getCol() {
-            return this.col;
-        }
-    }
-
-    class customComparator implements Comparator<HeapNode> {
-        public int compare(HeapNode a, HeapNode b) {
-            return a.value - b.value;
-        }
-    }
-
-    private PriorityQueue<HeapNode> minHeap;
-    private int length;
+    private int[][] matrix;
+    private int n;
 
     public int kthSmallest(int[][] matrix, int k) {
-        if (matrix == null || matrix.length == 0) return Integer.MIN_VALUE;
+        if (matrix == null || matrix.length == 0) return Integer.MAX_VALUE;
 
-        this.length = matrix.length;
+        this.matrix = matrix;
+        this.n = matrix.length;
 
-        if (k == 0) return matrix[0][0];
-        if (k == Math.pow(length, 2)) return matrix[length - 1][length - 1];
+        int start = matrix[0][0];
+        int end = matrix[n - 1][n - 1];
 
-        this.minHeap = 
-            new PriorityQueue<HeapNode>(
-                Math.min(length, k), new customComparator());
+        if (k == 1) return start;
+        if (k == Math.pow(n, 2)) return end;
+        if (k > Math.pow(n, 2)) return Integer.MAX_VALUE;        
 
-        IntStream.range(0, Math.min(length, k)).forEach(i -> {
-            HeapNode currElement = new HeapNode(matrix[i][0], i, 0);
+        while (start < end) {
+            int mid = end + (start - end) + 1;
 
-            minHeap.offer(currElement);
-        });
+            int[] smallLargePair = new int[] {this.matrix[0][0], this.matrix[n - 1][n - 1]};
 
-        HeapNode currElement = minHeap.peek();
-        while(k-- > 0) {
-            currElement = minHeap.poll();
-            int currRow = currElement.getRow();
-            int nextCol = currElement.getCol() + 1;
+            int count = this.countElementsToLeft(mid, smallLargePair);
 
-            if (nextCol < length) {
-                minHeap.offer(new HeapNode(matrix[currRow][nextCol], currRow, nextCol));
+            if (count == k) {
+                return smallLargePair[0];
+            } else if (count < k) {
+                start = smallLargePair[1];
+            } else {
+                end = smallLargePair[0];
             }
         }
 
-        return currElement.getValue();
+        return start;
+    }
+
+    private int countElementsToLeft(int mid, int[] smallLargePair) {
+        int count = 0;
+        int row = n - 1, col = 0;        
+
+        while (row >= 0 && col < n) {
+            if (mid > this.matrix[row][col]) {
+                smallLargePair[0] = Math.max(this.matrix[row][col], smallLargePair[0]);
+                col++;
+                count += row + 1;
+            } else {
+                smallLargePair[1] = Math.min(this.matrix[row][col], smallLargePair[1]);
+                row--;
+            }
+        }
+
+        return count;
     }
 }
