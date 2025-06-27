@@ -1,59 +1,74 @@
 class Solution {
+
+    private int[] result;
+
     public int[] findOrder(int numCourses, int[][] prerequisites) {
-        Map<Integer, List<Integer>> adjList = new HashMap<
-            Integer,
-            List<Integer>
-        >();
-        int[] indegree = new int[numCourses];
-        int[] topologicalOrder = new int[numCourses];
+        //HashMap -> Map dependencies
+        //Create an in-degree array 
+        //Process independent elements in a Queue
+        //Update the in-degree array as you pop from Queue
 
-        // Create the adjacency list representation of the graph
-        for (int i = 0; i < prerequisites.length; i++) {
-            int dest = prerequisites[i][0];
-            int src = prerequisites[i][1];
-            List<Integer> lst = adjList.getOrDefault(
-                src,
-                new ArrayList<Integer>()
-            );
-            lst.add(dest);
-            adjList.put(src, lst);
+        try {
+            if (numCourses == 0) return new int[] {};
 
-            // Record in-degree of each vertex
-            indegree[dest] += 1;
-        }
-
-        // Add all vertices with 0 in-degree to the queue
-        Queue<Integer> q = new LinkedList<Integer>();
-        for (int i = 0; i < numCourses; i++) {
-            if (indegree[i] == 0) {
-                q.add(i);
+            if (prerequisites.length == 0 || prerequisites == null) {
+                return IntStream.range(0, numCourses).toArray();
             }
-        }
 
-        int i = 0;
-        // Process until the Q becomes empty
-        while (!q.isEmpty()) {
-            int node = q.remove();
-            topologicalOrder[i++] = node;
+            result = new int[numCourses];
 
-            // Reduce the in-degree of each neighbor by 1
-            if (adjList.containsKey(node)) {
-                for (Integer neighbor : adjList.get(node)) {
-                    indegree[neighbor]--;
+            Map<Integer, List<Integer>> dependencies = new HashMap<>();
 
-                    // If in-degree of a neighbor becomes 0, add it to the Q
-                    if (indegree[neighbor] == 0) {
-                        q.add(neighbor);
-                    }
+            int[] inDegree = new int[numCourses];            
+
+            Queue<Integer> bfs = new LinkedList<>();
+
+            for (int i = 0; i < prerequisites.length; i++) {
+                
+                List<Integer> li = dependencies.getOrDefault(prerequisites[i][1], new ArrayList<>());
+                li.add(prerequisites[i][0]);
+
+                dependencies.put(prerequisites[i][1], li);
+
+                inDegree[prerequisites[i][0]] += 1;
+            }
+
+            for (int i = 0; i < numCourses; i++) {
+                if (inDegree[i] == 0) {
+                    bfs.add(i);
                 }
             }
+
+            int i = 0;
+            while (!bfs.isEmpty()) {
+                int course = bfs.poll();
+
+                result[i] = course;
+
+                if (dependencies.containsKey(course)) {
+                    for (int courses: dependencies.get(course)) {
+                        inDegree[courses]--;
+
+                        if (inDegree[courses] == 0) {
+                            bfs.add(courses);
+                        }
+                    }
+                }
+
+                i++;
+            }
+
+            if (i == numCourses) {
+                return result;
+            }
+
+            return new int[0];
+            
+        }
+        catch (RuntimeException e) {
+            System.out.println(e.getMessage());            
         }
 
-        // Check to see if topological sort is possible or not.
-        if (i == numCourses) {
-            return topologicalOrder;
-        }
-
-        return new int[0];
+        return result;
     }
 }
