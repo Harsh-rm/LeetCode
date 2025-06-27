@@ -61,6 +61,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0948-sort-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0948-sort-an-array) |
 | [1025-minimum-cost-for-tickets](https://github.com/Harsh-rm/LeetCode/tree/master/1025-minimum-cost-for-tickets) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
+| [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
 | [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
 ## Backtracking
@@ -124,6 +125,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0003-longest-substring-without-repeating-characters](https://github.com/Harsh-rm/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0076-minimum-window-substring](https://github.com/Harsh-rm/LeetCode/tree/master/0076-minimum-window-substring) |
+| [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
 ## Linked List
 |  |
 | ------- |
@@ -174,6 +176,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0532-k-diff-pairs-in-an-array) |
+| [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
 ## Matrix
 |  |
 | ------- |
@@ -375,6 +378,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0253-meeting-rooms-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0253-meeting-rooms-ii) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
 | [0560-subarray-sum-equals-k](https://github.com/Harsh-rm/LeetCode/tree/master/0560-subarray-sum-equals-k) |
+| [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
 ## Trie
 |  |
 | ------- |
