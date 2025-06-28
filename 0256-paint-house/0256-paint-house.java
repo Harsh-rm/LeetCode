@@ -12,23 +12,27 @@ class Solution {
 
             this.length = costs.length;
 
-            IntStream.range(1, length).forEach(i -> {
-                IntStream.range(0, 3).forEach(j -> {
-                    if (j == 0) {
-                        costs[i][j] += Math.min(costs[i - 1][j + 1], costs[i - 1][j + 2]);
-                    } else if (j == 1) {
-                        costs[i][j] += Math.min(costs[i - 1][j - 1], costs[i - 1][j + 1]);
-                    } else {
-                        costs[i][j] += Math.min(costs[i - 1][j - 1], costs[i - 1][j - 2]);
-                    }
-                });
-            });
+            int[] prev = costs[0];
 
-            this.result = IntStream.range(0, 3)
-                                .map(i -> costs[length - 1][i])
-                                .min()
-                                .orElse(0);
-        
+            for (int i = 1; i < length; i++) {
+                int[] current = new int[3];
+                final int row = i;
+                final int[] previous = prev;
+
+                IntStream.range(0, 3).forEach(j -> {
+                    final int color = j;
+                    current[color] = costs[row][color] +
+                                    IntStream.range(0, 3)
+                                            .filter(k -> k != color)
+                                            .map(k -> previous[k])
+                                            .min()
+                                            .orElse(0);
+                });
+
+                prev = current;
+            }
+
+            result = IntStream.of(prev).min().orElse(0);
         }
         catch (RuntimeException e) {
             System.out.println(e.getMessage());
