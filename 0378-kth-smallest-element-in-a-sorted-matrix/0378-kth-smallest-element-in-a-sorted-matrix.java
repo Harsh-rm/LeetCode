@@ -53,14 +53,14 @@ class Solution {
         HeapNode currElement = minHeap.peek();
         while(k-- > 0) {
             currElement = minHeap.poll();
-            int currRow = currElement.row;
-            int nextCol = currElement.col + 1;
+            int currRow = currElement.getRow();
+            int nextCol = currElement.getCol() + 1;
             
             if (nextCol < length) {
                 minHeap.offer(new HeapNode(matrix[currRow][nextCol], currRow, nextCol));
             }
         }
         
-        return currElement.value;
+        return currElement.getValue();
     }
 }
