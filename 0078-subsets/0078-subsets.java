@@ -10,8 +10,7 @@ class Solution {
             if (nums == null || nums.length == 0) return result;
 
             helper(nums, 0, new ArrayList<>());
-
-            return result;
+            
          }
          catch (RuntimeException e) {
             System.out.println(e.getMessage());
