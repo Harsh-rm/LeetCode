@@ -1,16 +1,23 @@
 class Solution {
-    List<List<Integer>> result;
-    
+
+    private List<List<Integer>> result;
+
     public List<List<Integer>> subsets(int[] nums) {
-        result = new ArrayList<>();
+        
+        try{
+            result = new ArrayList<>();
 
-        if (nums == null || nums.length == 0) return result;
+            if (nums == null || nums.length == 0) return result;
 
-        List<Integer> emptyList = new ArrayList<>();
+            List<Integer> emptyList = new ArrayList<>();
 
-        result.add(emptyList);
+            result.add(emptyList);
 
-        helper(nums);
+            helper(nums);
+        }
+        catch (RuntimeException e) {
+            System.out.println(e.getMessage());
+        }
 
         return result;
     }
