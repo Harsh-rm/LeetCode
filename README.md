@@ -38,6 +38,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0238-product-of-array-except-self](https://github.com/Harsh-rm/LeetCode/tree/master/0238-product-of-array-except-self) |
 | [0240-search-a-2d-matrix-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0253-meeting-rooms-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0253-meeting-rooms-ii) |
+| [0256-paint-house](https://github.com/Harsh-rm/LeetCode/tree/master/0256-paint-house) |
 | [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 | [0274-h-index](https://github.com/Harsh-rm/LeetCode/tree/master/0274-h-index) |
 | [0284-peeking-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0284-peeking-iterator) |
@@ -319,6 +320,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0122-best-time-to-buy-and-sell-stock-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0122-best-time-to-buy-and-sell-stock-ii) |
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
 | [0198-house-robber](https://github.com/Harsh-rm/LeetCode/tree/master/0198-house-robber) |
+| [0256-paint-house](https://github.com/Harsh-rm/LeetCode/tree/master/0256-paint-house) |
 | [0322-coin-change](https://github.com/Harsh-rm/LeetCode/tree/master/0322-coin-change) |
 | [0518-coin-change-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0518-coin-change-ii) |
 | [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
