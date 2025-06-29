@@ -10,25 +10,36 @@
  */
 class Solution {
     public ListNode mergeKLists(ListNode[] lists) {
-        if(lists == null || lists.length == 0) return null;
-        
-        PriorityQueue<ListNode> pq = new PriorityQueue<>((a,b) -> a.val - b.val);
-        ListNode dummy = new ListNode(-1);
-        ListNode curr = dummy;
-        
-        for(ListNode list : lists){
-            if(list != null) pq.add(list);
-        }
-        
-        while(!pq.isEmpty()) {
-            ListNode min = pq.poll();
-            curr.next = min;
-            curr = curr.next;
-            if(min.next != null) {
-                pq.add(min.next);
+        int amount = lists.length;
+        int interval = 1;
+        while (interval < amount) {
+            for (int i = 0; i < amount - interval; i += interval * 2) {
+                lists[i] = merge2Lists(lists[i], lists[i + interval]);
             }
+            interval *= 2;
         }
-        
-        return dummy.next;
+        return amount > 0 ? lists[0] : null;
+    }
+
+    public ListNode merge2Lists(ListNode l1, ListNode l2) {
+        ListNode head = new ListNode(0);
+        ListNode point = head;
+        while (l1 != null && l2 != null) {
+            if (l1.val <= l2.val) {
+                point.next = l1;
+                l1 = l1.next;
+            } else {
+                point.next = l2;
+                l2 = l1;
+                l1 = point.next.next;
+            }
+            point = point.next;
+        }
+        if (l1 == null) {
+            point.next = l2;
+        } else {
+            point.next = l1;
+        }
+        return head.next;
     }
 }
