@@ -57,11 +57,11 @@ class Solution {
 
         path.append("L");
         if (findPath(node.left, val, path)) return true;
-        path.deleteCharAt(path.length() - 1);
+        path.setLength(path.length() - 1);
 
         path.append("R");
         if (findPath(node.right, val, path)) return true;
-        path.deleteCharAt(path.length() - 1);
+        path.setLength(path.length() - 1);
 
         return false;
     }
