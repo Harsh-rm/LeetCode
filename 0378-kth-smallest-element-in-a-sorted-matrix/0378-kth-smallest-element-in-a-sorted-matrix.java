@@ -1,52 +1,66 @@
 class Solution {
-
-    private int result;
-    private int n;
-    private int[][] matrix;
-
-    public int kthSmallest(int[][] matrix, int k) {
-        this.result = Integer.MIN_VALUE;
-
-        if (matrix == null || matrix.length == 0) return this.result;
-
-        this.matrix = matrix;
-        this.n = matrix.length;        
-
-        int start = matrix[0][0];
-        int end = matrix[n - 1][n - 1];
-
-        while (start < end) {
-            int mid = start + (end - start) / 2;
-
-            int[] smallLargePair = new int[] {matrix[0][0], matrix[n - 1][n - 1]};
-
-            int count = this.countElementsToLeft(mid, smallLargePair);
-
-            if (count < k) {
-                start = mid + 1;
-            } else {
-                end = mid;
-            }
+    
+    public class HeapNode {
+        private int value;
+        private int row;
+        private int col;
+        
+        public HeapNode(int val, int row, int col) {
+            this.value = val;
+            this.row = row;
+            this.col = col;
         }
-
-        return start;
+        
+        public int getValue() {
+            return this.value;
+        }
+        
+        public int getRow() {
+            return this.row;
+        }
+        
+        public int getCol() {
+            return this.col;
+        }
     }
-
-    private int countElementsToLeft(int mid, int[] smallLargePair) {
-        int row = n - 1, col = 0;
-        int count = 0;
-
-        while (row >= 0 && col < n) {
-            if (mid < this.matrix[row][col]) {
-                smallLargePair[1] = Math.min(smallLargePair[1], this.matrix[row][col]);
-                row--;
-            } else {
-                smallLargePair[0] = Math.max(smallLargePair[0], this.matrix[row][col]);
-                col++;
-                count += row + 1;
+    
+    public class CustomComparator implements Comparator<HeapNode> {
+        public int compare(HeapNode a, HeapNode b) {
+            return Integer.compare(a.value, b.value);
+        }
+    }
+    
+    private PriorityQueue<HeapNode> minHeap;
+    private int length;
+        
+    public int kthSmallest(int[][] matrix, int k) {
+        if (matrix == null || matrix.length == 0) return Integer.MIN_VALUE;
+        
+        this.length = matrix.length;
+        
+        this.minHeap = new PriorityQueue<HeapNode>(
+            Math.min(length, k), new CustomComparator());
+        
+        if (k == 0) return matrix[0][0];
+        if (k == Math.pow(length, 2)) return matrix[length - 1][length - 1];
+        
+        IntStream.range(0, Math.min(length, k)).forEach(i -> {
+            HeapNode ele = new HeapNode(matrix[i][0], i, 0);
+            
+            minHeap.offer(ele); 
+        });
+        
+        HeapNode currElement = minHeap.peek();
+        while(k-- > 0) {
+            currElement = minHeap.poll();
+            int currRow = currElement.getRow();
+            int nextCol = currElement.getCol() + 1;
+            
+            if (nextCol < length) {
+                minHeap.offer(new HeapNode(matrix[currRow][nextCol], currRow, nextCol));
             }
         }
         
-        return count;
+        return currElement.getValue();
     }
 }
