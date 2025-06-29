@@ -15,75 +15,56 @@
  */
 class Solution {
 
-    private int src, dest;
     private StringBuilder srcPath, destPath;
-    private StringBuilder directions;
+    private StringBuilder dir;
 
     public String getDirections(TreeNode root, int startValue, int destValue) {
         if (root == null) return "";
 
-        try {
-            this.src = startValue;
-            this.dest = destValue;
-            this.srcPath = new StringBuilder();
-            this.destPath = new StringBuilder();
-            this.directions = new StringBuilder();
+        srcPath = new StringBuilder();
+        destPath = new StringBuilder();
+        dir = new StringBuilder();
 
-            TreeNode node = findLCA(root);
-
-            findPath(node, src, srcPath);
-            findPath(node, dest, destPath);
-
-            // Add "U" for each step to go up from start to LCA
-            directions.append("U".repeat(srcPath.length()));
-
-            // Append the path from LCA to destination
-            directions.append(destPath);
-
-        } catch (Exception e) {
-            System.out.println("Unchecked Exception in getDirestions: " + e);
-        }
+        TreeNode lca = this.findLCA(root, startValue, destValue);
         
-        return directions.toString();
+        if (lca != null) {
+            findPath(lca, startValue, srcPath);
+            findPath(lca, destValue, destPath);
+        }
+
+        dir.append("U".repeat(srcPath.length()));
+
+        dir.append(destPath);
+
+        return dir.toString();
     }
 
-    private TreeNode findLCA(TreeNode root) {
-        //Base case
+    private TreeNode findLCA(TreeNode root, int s, int d) {
         if (root == null) return null;
 
-        if (root.val == src || root.val == dest) {
-            return root;
-        }
+        if (root.val == s || root.val == d) return root;
 
-        //Logic
-        TreeNode leftNode = findLCA(root.left);
-        TreeNode rightNode = findLCA(root.right);
+        TreeNode leftNode = findLCA(root.left, s, d);
+        TreeNode rightNode = findLCA(root.right, s, d);
 
-        if (rightNode == null) return leftNode;
-        else if (leftNode == null) return rightNode;
-        
-        return root;
+        return (leftNode != null) ? ((rightNode != null) ? root : leftNode) : rightNode;
     }
 
-    private boolean findPath(TreeNode node, int target, StringBuilder path) {
-        //Base case
+    private boolean findPath(TreeNode node, int val, StringBuilder path) {
         if (node == null) return false;
 
-        if (node.val == target) return true;
+        if (node.val == val) return true;
 
-        //Logic
         path.append("L");
-        if (findPath(node.left, target, path)) {
-            return true;
-        }
-        path.setLength(path.length() - 1);
+        if (findPath(node.left, val, path)) return true;
+        path.deleteCharAt(path.length() - 1);
 
         path.append("R");
-        if (findPath(node.right, target, path)) {
-            return true;
-        }
-        path.setLength(path.length() - 1);
+        if (findPath(node.right, val, path)) return true;
+        path.deleteCharAt(path.length() - 1);
 
         return false;
     }
+
+
 }
