@@ -102,6 +102,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0740-delete-and-earn](https://github.com/Harsh-rm/LeetCode/tree/master/0740-delete-and-earn) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
+| [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/Harsh-rm/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
 ## String
 |  |
@@ -121,6 +122,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0412-fizz-buzz](https://github.com/Harsh-rm/LeetCode/tree/master/0412-fizz-buzz) |
 | [0648-replace-words](https://github.com/Harsh-rm/LeetCode/tree/master/0648-replace-words) |
 | [0720-longest-word-in-dictionary](https://github.com/Harsh-rm/LeetCode/tree/master/0720-longest-word-in-dictionary) |
+| [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/Harsh-rm/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/Harsh-rm/LeetCode/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Sliding Window
 |  |
@@ -128,6 +130,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0003-longest-substring-without-repeating-characters](https://github.com/Harsh-rm/LeetCode/tree/master/0003-longest-substring-without-repeating-characters) |
 | [0076-minimum-window-substring](https://github.com/Harsh-rm/LeetCode/tree/master/0076-minimum-window-substring) |
 | [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
+| [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/Harsh-rm/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
 ## Linked List
 |  |
 | ------- |
