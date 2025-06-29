@@ -39,7 +39,7 @@ class Solution {
         this.length = matrix.length;
         
         this.minHeap = new PriorityQueue<HeapNode>(
-            Math.min(length, k), new CustomComparator());
+            Math.min(length, k), (a, b) -> Integer.compare(a.value, b.value));
         
         if (k == 0) return matrix[0][0];
         if (k == Math.pow(length, 2)) return matrix[length - 1][length - 1];
