@@ -1,34 +1,48 @@
 class Solution {
 
-    private int[][] dirs, dp;
+    private static final int[][] dirs = new int[][] {{0,1}, {1,0}};
+    private int result = Integer.MIN_VALUE;
+    private int m, n;
 
     public int minPathSum(int[][] grid) {
-        if (grid == null || grid.length == 0) return -1;
+        
+        try {
+            if (grid == null || grid.length == 0) return result;
 
-        int m = grid.length;
-        int n = grid[0].length;
+            this.m = grid.length;
+            this.n = grid[0].length;
 
-        dirs = new int[][] {{0, 1}, {1, 0}};        
-        dp = new int[m][n];
+            result = helper(grid);
+        }
+        catch (RuntimeException e) {
+            System.err.println("Exception in minPathSum(int[][] grid) -> class Solution: " + e.getMessage());
+            throw e;
+        }
 
-        dp[0][0] = grid[0][0];
+        return result;
+    }
 
-        for (int i = 0; i < m; i++) {
-            for (int j = 0; j < n; j++) {
-                
-                for (int[] dir: dirs){
-                    int nr = i + dir[0];
-                    int nc = j + dir[1];
+    private int helper(int[][] grid) {
+        
+        for (int i = this.m - 1; i >= 0; i--) {
 
-                    if (nr >= 0 && nr < m && nc >= 0 && nc < n){
-                        int temp = dp[i][j] + grid[nr][nc];
-                        if (dp[nr][nc] == 0) dp[nr][nc] = temp;
-                        else dp[nr][nc] = Math.min(dp[nr][nc], temp);
-                    }                    
+            for (int j = this.n - 1; j >= 0; j--) {
+
+                if (i == this.m - 1 && j != this.n - 1) {
+                    grid[i][j] = grid[i][j] + grid[i][j + 1];
+                }
+                else if (i != this.m - 1 && j == this.n - 1) {
+                    grid[i][j] = grid[i][j] + grid[i + 1][j];
+                }
+                else if (i != this.m - 1 && j != this.n - 1) {
+                    grid[i][j] = grid[i][j] + Math.min(grid[i][j + 1], grid[i + 1][j]);
+                }
+                else {
+                    //do nothing
                 }
             }
         }
 
-        return dp[m - 1][n -1];
+        return grid[0][0];
     }
 }
