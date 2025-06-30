@@ -64,6 +64,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [1025-minimum-cost-for-tickets](https://github.com/Harsh-rm/LeetCode/tree/master/1025-minimum-cost-for-tickets) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
 | [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
+| [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/Harsh-rm/LeetCode/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
 ## Backtracking
@@ -196,6 +197,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [0967-minimum-falling-path-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0967-minimum-falling-path-sum) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
+| [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/Harsh-rm/LeetCode/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 ## Sorting
 |  |
@@ -312,6 +314,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
+| [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/Harsh-rm/LeetCode/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 ## Dynamic Programming
 |  |
