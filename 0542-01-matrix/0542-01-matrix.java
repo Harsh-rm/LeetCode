@@ -1,13 +1,12 @@
 class Solution {
     private int m, n;
-    private int[][] dirs;
+    private static final int[][] dirs = new int[][] {{0, 1}, {1, 0}, {0, -1}, {-1, 0}}; //Right, Down, Left, Up;
 
     public int[][] updateMatrix(int[][] mat) {
         if (mat == null || mat.length == 0) return new int[0][0];
 
-        m = mat.length;
-        n = mat[0].length;
-        dirs = new int[][] {{0, 1}, {1, 0}, {0, -1}, {-1, 0}}; //Right, Down, Left, Up
+        this.m = mat.length;
+        this.n = mat[0].length;        
 
         bfs(mat);
 
@@ -30,7 +29,7 @@ class Solution {
 
         while (!visited.isEmpty()) {            
 
-            int[] curr = visited.poll();
+            final int[] curr = visited.poll();
 
             Arrays.stream(dirs)
                     .map(dir -> new int[] {curr[0] + dir[0], curr[1] + dir[1]})
@@ -44,10 +43,10 @@ class Solution {
     }
 
     private Predicate<int[]> isValidPosition() {
-        return pos -> pos[0] >= 0 && pos[0] < m && pos[1] >= 0 && pos[1] < n;
+        return pos -> (pos[0] >= 0 && pos[0] < m && pos[1] >=0 && pos[1] < n);
     }
 
     private BiPredicate<int[], int[][]> isNotVisited() {
-        return (pos, mat) -> mat[pos[0]][pos[1]] == -1;
+        return (pos, mat) -> (mat[pos[0]][pos[1]] == -1);
     }
 }
