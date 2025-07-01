@@ -37,8 +37,13 @@ class StepState {
 }
 
 class Solution {
+
+    private static final int[][] dirs = new int[][] {{0, 1}, {1, 0}, {0, -1}, {-1, 0}}; //Right, Down, Left, Up;
+    private int rows, cols;
+
     public int shortestPath(int[][] grid, int k) {
-        int rows = grid.length, cols = grid[0].length;
+        rows = grid.length;
+        cols = grid[0].length;
         int[] target = {rows - 1, cols - 1};
 
         // if we have sufficient quotas to eliminate the obstacles in the worst case,
@@ -62,32 +67,26 @@ class Solution {
             if (target[0] == curr.row && target[1] == curr.col) {
                 return curr.steps;
             }
-
-            int[] nextSteps = {curr.row, curr.col + 1, curr.row + 1, curr.col,
-                    curr.row, curr.col - 1, curr.row - 1, curr.col};
-
+            
             // explore the four directions in the next step
-            for (int i = 0; i < nextSteps.length; i += 2) {
-                int nextRow = nextSteps[i];
-                int nextCol = nextSteps[i + 1];
+            Arrays.stream(dirs)
+                .map(dir -> new int[] { curr.row + dir[0], curr.col + dir[1] })
+                .filter(isInBounds())
+                .map(p -> new StepState(curr.steps + 1, p[0], p[1], curr.k - grid[p[0]][p[1]]))
+                .filter(s -> s.k >= 0 && !seen.contains(s))
+                .forEach(s -> {
+                    seen.add(s);
+                    queue.addLast(s);
+                });
 
-                // out of the boundary of grid
-                if (0 > nextRow || nextRow == rows || 0 > nextCol || nextCol == cols) {
-                    continue;
-                }
-
-                int nextElimination = curr.k - grid[nextRow][nextCol];
-                StepState newState = new StepState(curr.steps + 1, nextRow, nextCol, nextElimination);
-
-                // add the next move in the queue if it qualifies.
-                if (nextElimination >= 0 && !seen.contains(newState)) {
-                    seen.add(newState);
-                    queue.addLast(newState);
-                }
-            }
         }
 
         // did not reach the target
         return -1;
     }
+
+    private Predicate<int[]> isInBounds() {
+        return p -> p[0] >= 0 && p[0] < rows && p[1] >= 0 && p[1] < cols;
+    }
+
 }
