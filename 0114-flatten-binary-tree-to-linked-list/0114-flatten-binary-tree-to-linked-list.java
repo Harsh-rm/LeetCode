@@ -33,8 +33,7 @@ class Solution {
             node.left = null;
         }
         
-        if (rightTail == null) return leftTail;
-        else return rightTail;
+        return (rightTail != null) ? rightTail : leftTail;
     }
     
     public void flatten(TreeNode root) {
