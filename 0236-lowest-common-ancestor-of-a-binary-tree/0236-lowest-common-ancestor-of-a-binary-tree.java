@@ -32,10 +32,12 @@ class Solution {
         TreeNode right = dfs(root.right);
 
         //Condition check for LCA
+        /*
         if (left != null && right != null) {
             return root;
         }
+        */
 
-        return (left == null) ? right : left;
+        return (left != null) ? (right != null) ? root : left : right;
     }
 }
