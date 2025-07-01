@@ -6,9 +6,9 @@ class Solution {
 
         HashMap<Integer, Integer> freqMap = new HashMap<>();
 
-        for (int num: nums) {
-            freqMap.merge(num, 1, Integer::sum);
-        }
+        IntStream.range(0, nums.length).forEach(i -> {
+            freqMap.put(nums[i], freqMap.getOrDefault(nums[i], 0) + 1);
+        });
 
         for (int key: freqMap.keySet()) {
             if (k == 0 && freqMap.get(key) > 1) {
