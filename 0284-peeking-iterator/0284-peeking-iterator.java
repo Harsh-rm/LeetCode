@@ -15,30 +15,51 @@ class PeekingIterator implements Iterator<Integer> {
 	
     // Returns the next element in the iteration without advancing the iterator.
 	public Integer peek() {
-        return peekElement;
+        try {
+            return peekElement;
+        }
+        catch(RuntimeException e) {
+            System.err.println("Unchecked Exception at hasNext() -> class Peeking Iterator" + e);
+            return null;
+        }
 	}
 	
 	// hasNext() and next() should behave the same as in the Iterator interface.
 	// Override them if needed.
 	@Override
 	public Integer next() {
-	    Integer temp = peekElement;
 
-        if (iterator.hasNext()) {
-            peekElement = iterator.next();
-        } else {
-            peekElement = null;
+        try {
+            Integer temp = peekElement;
+
+            if (iterator.hasNext()) {
+                peekElement = iterator.next();
+            } else {
+                peekElement = null;
+            }
+
+            return temp;
         }
-        
-        return temp;
+        catch(RuntimeException e) {
+            System.err.println("Unchecked Exception at hasNext() -> class Peeking Iterator" + e);
+            return null;
+        }        
 	}
 	
 	@Override
 	public boolean hasNext() {
-	    if(peekElement == null) {
+
+        try {
+            if(peekElement == null) {
+                return false;
+            }
+
+            return true;
+        } 
+        catch(RuntimeException e) {
+            System.err.println("Unchecked Exception at hasNext() -> class Peeking Iterator" + e);
             return false;
         }
 
-        return true;
 	}
 }
