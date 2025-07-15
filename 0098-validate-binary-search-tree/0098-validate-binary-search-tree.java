@@ -13,20 +13,31 @@
  *     }
  * }
  */
+
+//Keep track of prev and validate > curr node when moving left
+//Keep track of prev and check < curr node when moving right
+
 class Solution {
+
+    private TreeNode prev;
+
     public boolean isValidBST(TreeNode root) {
         if (root == null) return true;
 
-        return checkValidity(root, null, null);
+        return dfs(root);
     }
 
-    private boolean checkValidity(TreeNode root, Integer Min, Integer Max) {
-        //base
+    private boolean dfs(TreeNode root) {
         if (root == null) return true;
-        //logic
-        if (Max != null && root.val >= Max) return false;
-        if (Min != null && root.val <= Min) return false;
 
-        return checkValidity(root.left, Min, root.val) && checkValidity(root.right, root.val, Max);
+        if (!dfs(root.left)) return false;
+
+        if (prev != null && prev.val >= root.val) {
+            return false;            
+        } else {
+            prev = root;
+        }
+
+        return dfs(root.right);
     }
 }
