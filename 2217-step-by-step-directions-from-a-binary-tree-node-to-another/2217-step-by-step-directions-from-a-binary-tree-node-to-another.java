@@ -15,56 +15,59 @@
  */
 class Solution {
 
-    private StringBuilder srcPath, destPath;
-    private StringBuilder dir;
+    private int startValue, destValue;
+    StringBuilder startPath, destPath, result;
 
     public String getDirections(TreeNode root, int startValue, int destValue) {
-        if (root == null) return "";
+        this.startValue = startValue;
+        this.destValue = destValue;
 
-        srcPath = new StringBuilder();
+        TreeNode lcaNode = findLCA(root);
+
+        //System.out.println(lcaNode.val);
+
+        startPath = new StringBuilder();
         destPath = new StringBuilder();
-        dir = new StringBuilder();
-
-        TreeNode lca = this.findLCA(root, startValue, destValue);
+        result = new StringBuilder();
         
-        if (lca != null) {
-            findPath(lca, startValue, srcPath);
-            findPath(lca, destValue, destPath);
+        if (lcaNode != null) { 
+            dfs(lcaNode, startValue, startPath);
+            dfs(lcaNode, destValue, destPath);
         }
 
-        dir.append("U".repeat(srcPath.length()));
+        result.append("U".repeat(startPath.length()));
+        result.append(destPath);     
 
-        dir.append(destPath);
-
-        return dir.toString();
+        return result.toString();
     }
 
-    private TreeNode findLCA(TreeNode root, int s, int d) {
+    private TreeNode findLCA(TreeNode root) {
         if (root == null) return null;
 
-        if (root.val == s || root.val == d) return root;
+        if (root.val == startValue || root.val == destValue) return root;
 
-        TreeNode leftNode = findLCA(root.left, s, d);
-        TreeNode rightNode = findLCA(root.right, s, d);
+        TreeNode leftNode = findLCA(root.left);
 
-        return (leftNode != null) ? ((rightNode != null) ? root : leftNode) : rightNode;
+        TreeNode rightNode = findLCA(root.right);
+
+        return (leftNode != null ? (rightNode != null ? root : leftNode) : rightNode);
     }
 
-    private boolean findPath(TreeNode node, int val, StringBuilder path) {
-        if (node == null) return false;
+    private boolean dfs(TreeNode lcaNode, int target, StringBuilder path) {
+        //Base case
+        if (lcaNode == null) return false;
 
-        if (node.val == val) return true;
+        if (lcaNode.val == target) return true;
 
+        //Action
         path.append("L");
-        if (findPath(node.left, val, path)) return true;
-        path.setLength(path.length() - 1);
+        if (dfs(lcaNode.left, target, path)) return true;
+        path.deleteCharAt(path.length() - 1);        
 
         path.append("R");
-        if (findPath(node.right, val, path)) return true;
-        path.setLength(path.length() - 1);
+        if (dfs(lcaNode.right, target, path)) return true;
+        path.deleteCharAt(path.length() - 1);
 
         return false;
     }
-
-
 }
