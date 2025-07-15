@@ -19,25 +19,34 @@
 
 class Solution {
 
-    private TreeNode prev;
-
-    public boolean isValidBST(TreeNode root) {
-        if (root == null) return true;
-
-        return dfs(root);
+    private static class Wrapper {
+        TreeNode node;
     }
 
-    private boolean dfs(TreeNode root) {
+    public boolean isValidBST(TreeNode root) {        
+        try {
+            return dfs(root, new Wrapper());
+        } 
+        catch (RuntimeException e) {
+            System.err.println("Un-checked exception in isValidBST -> class Solution: " + e);            
+            return false;
+        }
+        finally {
+            //System.out.println("isValidBST is complete!");
+        }
+    }
+
+    private boolean dfs(TreeNode root, Wrapper prev) {
         if (root == null) return true;
 
-        if (!dfs(root.left)) return false;
+        if (!dfs(root.left, prev)) return false;
 
-        if (prev != null && prev.val >= root.val) {
+        if (prev.node != null && prev.node.val >= root.val) {
             return false;            
-        } else {
-            prev = root;
         }
 
-        return dfs(root.right);
+        prev.node = root;
+
+        return dfs(root.right, prev);
     }
 }
