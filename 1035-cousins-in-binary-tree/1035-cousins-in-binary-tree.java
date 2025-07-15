@@ -13,71 +13,50 @@
  *     }
  * }
  */
-
 class Solution {
-    private boolean result;
+
+    private static class Wrapper {
+        int level;
+        TreeNode node;
+
+        Wrapper(TreeNode node, int level) {
+            this.node = node;
+            this.level = level;
+        }
+    }
+
+    private Wrapper xParent, yParent;
 
     public boolean isCousins(TreeNode root, int x, int y) {
-        result = false;
+        try {
 
-        if (root == null) return result;
+            xParent = dfs(root, null, x, 0);
+            yParent = dfs(root, null, y, 0);
 
-        int x_parent = 0;
-        int y_parent = 0;
-        Queue<TreeNode> bfs = new LinkedList<>();
-        boolean flag = false;
-
-        bfs.add(root);
-
-        while(!bfs.isEmpty()) {
-            int size = bfs.size();
+            if (xParent.node.val != yParent.node.val && xParent.level == yParent.level) return true;
             
-            for (int i = 0; i < size; i++) {
-                TreeNode curr = bfs.poll();
+            return false;
+        }
+        catch (RuntimeException e) {
+            System.err.println("Un-checked exception at isCousins() -> class Solution: " + e.getMessage());
+            return false;
+        }
+        finally {
+            //System.out.println("isCousins executed successfully!");
+        }
+    }
 
-                if (curr.left != null) {
-                    bfs.add(curr.left);
-                }
+    private static Wrapper dfs(TreeNode root, TreeNode prev, int target, int level) {
+        if (root == null) return null;
 
-                if (curr.right != null) {
-                    bfs.add(curr.right);
-                }
-
-                if ((curr.left!= null && curr.left.val == x) || (curr.right != null && curr.right.val == x)) {
-                    x_parent = curr.val;
-                }
-
-                if ((curr.left!= null && curr.left.val == y) || (curr.right != null && curr.right.val == y)) {
-                    y_parent = curr.val;
-                }
-
-                if (curr.val == x && x_parent != y_parent) {
-                    if (flag) {
-                        result = true;
-                    } else {
-                        flag = true;
-                    }
-                } else if (curr.val == x && x_parent == y_parent) {
-                    return false;
-                } 
-
-                if (curr.val == y && x_parent != y_parent) {
-                    if (flag) {
-                        result = true;
-                    } else {
-                        flag = true;
-                    }
-                } else if (curr.val == y && x_parent == y_parent) {
-                    return false;
-                } 
-            }
-
-            if (flag) {
-                flag = false;
-            }
-
+        if (root.val == target) {
+            return new Wrapper (prev,  level);
         }
 
-        return result;
+        Wrapper left = dfs(root.left, root, target, level + 1);
+        if (left != null) return left;
+
+        Wrapper right = dfs(root.right, root, target, level + 1);
+        return right;
     }
 }
