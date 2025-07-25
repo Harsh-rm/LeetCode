@@ -13,20 +13,20 @@ class LRUCache {
             this.key = key;
             this.value = value;
         }
+    }
 
-        private void addToHead(Node node) {
-            node.next = head.next;
-            node.prev = head;
-            head.next.prev = node;
-            head.next = node;
-        }
+    private void addToHead(Node node) {
+        node.next = head.next;
+        node.prev = head;
+        head.next.prev = node;
+        head.next = node;
+    }
 
-        private void removeNode(Node node) {
-            node.prev.next = node.next;
-            node.next.prev = node.prev;
-            node.next = null;
-            node.prev = null;
-        }
+    private void removeNode(Node node) {
+        node.prev.next = node.next;
+        node.next.prev = node.prev;
+        node.next = null;
+        node.prev = null;
     }
 
     Map<Integer, Node> keyMap;
@@ -46,8 +46,8 @@ class LRUCache {
         try {
             if (keyMap.containsKey(key)) {
                 Node node = keyMap.get(key);
-                node.removeNode(node);
-                node.addToHead(node);                
+                removeNode(node);
+                addToHead(node);                
                 return node.value;
             }
             else {
@@ -63,20 +63,20 @@ class LRUCache {
     public void put(int key, int value) {
         if (keyMap.containsKey(key)) {
             Node node = keyMap.get(key);
-            node.removeNode(node);
-            node.addToHead(node);
+            removeNode(node);
+            addToHead(node);
             node.value = value;
             return;
         } 
         else {
             if (keyMap.size() == capacity) {
                 Node lruNode = tail.prev;
-                lruNode.removeNode(lruNode);
+                removeNode(lruNode);
                 keyMap.remove(lruNode.key);
             }
             Node node = new Node(key, value);
             keyMap.put(key, node);
-            node.addToHead(node);
+            addToHead(node);
             return;
         }
     }
