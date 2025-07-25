@@ -1,27 +1,26 @@
 class Logger {
 
-    private Map<String, Integer> messageTimeMap;
+    Map<String, Integer> messageTimeMap;
 
     public Logger() {
-        messageTimeMap = new HashMap<>();
+        messageTimeMap = new HashMap<>();    
     }
     
     public boolean shouldPrintMessage(int timestamp, String message) {
-        if (!this.messageTimeMap.containsKey(message)) {
-            this.messageTimeMap.put(message, timestamp);
+        if (!messageTimeMap.containsKey(message)) {
+            messageTimeMap.put(message, timestamp);
             return true;
         }
 
-            Integer oldTimestamp = this.messageTimeMap.get(message);
+        int oldTimestamp = messageTimeMap.get(message);
 
-            if (timestamp - oldTimestamp >= 10) {
-                messageTimeMap.put(message, timestamp);
-                return true;
-            }
-            else {
-                return false;
-            }
-        
+        if (timestamp - oldTimestamp >= 10) {
+            messageTimeMap.put(message, timestamp);
+            return true;
+        }
+        else {
+            return false;
+        }
     }
 }
 
