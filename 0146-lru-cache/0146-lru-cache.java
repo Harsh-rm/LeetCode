@@ -1,62 +1,84 @@
 class LRUCache {
-    class Node {
+
+    public class Node {
         int key, value;
         Node next, prev;
+
+        public Node() {
+            this.key = -1;
+            this.value = -1;
+        }
+
         public Node(int key, int value) {
             this.key = key;
             this.value = value;
         }
+
+        private void addToHead(Node node) {
+            node.next = head.next;
+            node.prev = head;
+            head.next.prev = node;
+            head.next = node;
+        }
+
+        private void removeNode(Node node) {
+            node.prev.next = node.next;
+            node.next.prev = node.prev;
+            node.next = null;
+            node.prev = null;
+        }
     }
-    
+
+    Map<Integer, Node> keyMap;
     Node head, tail;
-    HashMap<Integer, Node> map = new HashMap<Integer, Node>();
     int capacity;
-    
-    private void removeNode(Node node) {
-        node.prev.next = node.next;
-        node.next.prev = node.prev; 
-    }
-    
-    private void addToHead(Node node) {
-        node.next = head.next;
-        node.prev = head;
-        node.next.prev = node;
-        head.next = node;
-    }
-    
+
     public LRUCache(int capacity) {
-        map = new HashMap<>();
+        keyMap = new HashMap<Integer, Node>();
         this.capacity = capacity;
-        head = new Node(-1, 1);
-        tail = new Node(-1, 1);
+        head = new Node();
+        tail = new Node();
         head.next = tail;
         tail.prev = head;
     }
     
     public int get(int key) {
-        if(!map.containsKey(key)) return -1;
-        Node node = map.get(key);
-        removeNode(node);
-        addToHead(node);
-        return node.value;
+        try {
+            if (keyMap.containsKey(key)) {
+                Node node = keyMap.get(key);
+                node.removeNode(node);
+                node.addToHead(node);                
+                return node.value;
+            }
+            else {
+                return -1;
+            }
+        }
+        catch (RuntimeException e) {
+            System.err.println("Unchecked exception in get(int) -> class LRUCache: " + e.getMessage());
+            return -1;
+        }
     }
     
     public void put(int key, int value) {
-        if(map.containsKey(key)) {
-            Node node = map.get(key);
-            removeNode(node);
-            addToHead(node);
+        if (keyMap.containsKey(key)) {
+            Node node = keyMap.get(key);
+            node.removeNode(node);
+            node.addToHead(node);
             node.value = value;
             return;
+        } 
+        else {
+            if (keyMap.size() == capacity) {
+                Node lruNode = tail.prev;
+                lruNode.removeNode(lruNode);
+                keyMap.remove(lruNode.key);
+            }
+            Node node = new Node(key, value);
+            keyMap.put(key, node);
+            node.addToHead(node);
+            return;
         }
-        if(capacity == map.size()){
-            Node tailPrev = tail.prev;
-            removeNode(tailPrev);
-            map.remove(tailPrev.key);
-        }
-        Node newnode = new Node(key, value);
-        map.put(key, newnode);
-        addToHead(newnode);
     }
 }
 
