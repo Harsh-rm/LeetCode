@@ -46,6 +46,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0284-peeking-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0284-peeking-iterator) |
 | [0322-coin-change](https://github.com/Harsh-rm/LeetCode/tree/master/0322-coin-change) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
+| [0379-design-phone-directory](https://github.com/Harsh-rm/LeetCode/tree/master/0379-design-phone-directory) |
 | [0506-relative-ranks](https://github.com/Harsh-rm/LeetCode/tree/master/0506-relative-ranks) |
 | [0518-coin-change-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0518-coin-change-ii) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
@@ -97,6 +98,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0290-word-pattern](https://github.com/Harsh-rm/LeetCode/tree/master/0290-word-pattern) |
 | [0355-design-twitter](https://github.com/Harsh-rm/LeetCode/tree/master/0355-design-twitter) |
 | [0359-logger-rate-limiter](https://github.com/Harsh-rm/LeetCode/tree/master/0359-logger-rate-limiter) |
+| [0379-design-phone-directory](https://github.com/Harsh-rm/LeetCode/tree/master/0379-design-phone-directory) |
 | [0409-longest-palindrome](https://github.com/Harsh-rm/LeetCode/tree/master/0409-longest-palindrome) |
 | [0460-lfu-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0460-lfu-cache) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
@@ -150,6 +152,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0206-reverse-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0206-reverse-linked-list) |
 | [0234-palindrome-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0234-palindrome-linked-list) |
 | [0355-design-twitter](https://github.com/Harsh-rm/LeetCode/tree/master/0355-design-twitter) |
+| [0379-design-phone-directory](https://github.com/Harsh-rm/LeetCode/tree/master/0379-design-phone-directory) |
 | [0460-lfu-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0460-lfu-cache) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
@@ -396,6 +399,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0341-flatten-nested-list-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0355-design-twitter](https://github.com/Harsh-rm/LeetCode/tree/master/0355-design-twitter) |
 | [0359-logger-rate-limiter](https://github.com/Harsh-rm/LeetCode/tree/master/0359-logger-rate-limiter) |
+| [0379-design-phone-directory](https://github.com/Harsh-rm/LeetCode/tree/master/0379-design-phone-directory) |
 | [0460-lfu-cache](https://github.com/Harsh-rm/LeetCode/tree/master/0460-lfu-cache) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
@@ -429,6 +433,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0232-implement-queue-using-stacks](https://github.com/Harsh-rm/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0341-flatten-nested-list-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
+| [0379-design-phone-directory](https://github.com/Harsh-rm/LeetCode/tree/master/0379-design-phone-directory) |
 ## Hash Function
 |  |
 | ------- |
