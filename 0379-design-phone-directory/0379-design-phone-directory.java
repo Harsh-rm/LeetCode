@@ -43,7 +43,7 @@ class PhoneDirectory {
     public void release(int number) {
         try {
             if (!lookupNumbers.contains(number)) {
-                assignNumbers.addFirst(number);
+                assignNumbers.addLast(number);
                 lookupNumbers.add(number);
 
                 return;
