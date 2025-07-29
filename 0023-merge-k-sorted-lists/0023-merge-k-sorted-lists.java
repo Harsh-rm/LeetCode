@@ -21,7 +21,7 @@ class Solution {
             result = new ListNode(-1);
             ListNode curr = result;
 
-            PriorityQueue<ListNode> pq = new PriorityQueue<>((a,b) -> a.val - b.val);
+            PriorityQueue<ListNode> pq = new PriorityQueue<>(k, (a,b) -> a.val - b.val);
 
             for (ListNode head: lists) {
                 if (head != null) pq.add(head);
