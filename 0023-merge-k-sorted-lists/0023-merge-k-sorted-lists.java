@@ -9,54 +9,36 @@
  * }
  */
 class Solution {
-    public ListNode mergeKLists(ListNode[] lists) {
 
+    ListNode result;
+    int k;
+
+    public ListNode mergeKLists(ListNode[] lists) {
+        if (lists == null || lists.length == 0) return null;
 
         try {
-            if (lists == null || lists.length == 0) return null;
+            this.k = lists.length;
+            result = new ListNode(-1);
+            ListNode curr = result;
 
-            int amount = lists.length;
-            int interval = 1;
+            PriorityQueue<ListNode> pq = new PriorityQueue<>((a,b) -> a.val - b.val);
 
-            while (interval < amount) {
-                for (int i = 0; i < amount - interval; i += interval * 2) {
-                    lists[i] = this.merge2Lists(lists[i], lists[i + interval]);
-                }
-                interval *= 2;
+            for (ListNode head: lists) {
+                if (head != null) pq.add(head);
             }
+
+            while (!pq.isEmpty()) {
+                ListNode min = pq.poll();
+                curr.next = min;
+                curr = min;
+                if (min.next != null) pq.add(min.next);
+            }
+
+            return result.next;
         }
         catch (RuntimeException e) {
-            System.out.println(e.getMessage());
+            System.err.println("Unchecked exception in mergeKLists -> class Solution: " + e.getMessage());
             return null;
         }
-
-        return lists[0];
-    }
-
-    private ListNode merge2Lists(ListNode l1, ListNode l2) {
-        ListNode head = new ListNode(0);
-        ListNode point = head;
-
-        try {
-            while (l1 != null && l2 != null) {
-                if (l1.val > l2.val) {
-                    point.next = l2;
-                    l2 = l2.next;
-                } 
-                else {
-                    point.next = l1;
-                    l1 = l1.next;
-                }
-                point = point.next;
-            }
-
-            point.next = (l1 == null) ? l2 : l1;
-        }
-        catch(RuntimeException e) {
-            System.out.println(e.getMessage());
-            return null;
-        }
-
-        return head.next;
     }
 }
