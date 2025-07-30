@@ -1,33 +1,34 @@
 class Solution {
+
+    Integer n, index;
+
     public void nextPermutation(int[] nums) {
-        if (nums == null) return;
+        if (nums == null || nums.length == 0 || nums.length == 1) return;
 
-        int n = nums.length;
-        int index = -1;
+        this.n = nums.length;
+        this.index = -1;
 
-        for (int i = n - 1; i > 0; i--) {
-            if (nums[i - 1] < nums[i]) {
-                index = i - 1;
+        for (int i = n - 2; i >= 0; i--) {
+            if (nums[i] < nums[i + 1]) {
+                findGreaterEle(nums, i);
+                index = i;
                 break;
             }
         }
 
-        if (index != -1) {
-            for (int i = n - 1; i >= 0; i--) {
-                if (nums[index] < nums[i]) {
-                    swap(nums, index, i);
-                    break;
-                }
-            }
-        }
-
         Arrays.sort(nums, index + 1, n);
-        
+
+        return;
     }
 
-    private void swap(int[] nums, int index, int i) {
-        int temp = nums[index];
-        nums[index] = nums[i];
-        nums[i] = temp;
+    private void findGreaterEle(int[] nums, int k) {
+        for (int i = n - 1; i > k; i--) {
+            if (nums[i] > nums[k]) {
+                int temp = nums[i];
+                nums[i] = nums[k];
+                nums[k] = temp;
+                break;
+            }
+        }
     }
 }
