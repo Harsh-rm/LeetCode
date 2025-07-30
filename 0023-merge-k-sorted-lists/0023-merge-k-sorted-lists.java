@@ -11,21 +11,24 @@
 class Solution {
 
     ListNode result;
-    Integer k;
+    Integer amount, interval;
 
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null ||  lists.length == 0) return null;
 
         try {
-            this.k = lists.length;
-            result = new ListNode(Integer.MIN_VALUE);
-            ListNode curr = result;
+            this.amount = lists.length;
+            this.interval = 1;
 
-            for (ListNode li : lists) {
-                curr = merge2Lists(curr, li);
+            while (interval < amount) {
+                for (int i = 0; i < amount - interval; i += interval * 2) {
+                    lists[i] = merge2Lists(lists[i], lists[i + interval]);
+                }
+
+                interval *= 2;
             }
 
-            return result.next;
+            return lists[0];
         }
         catch (RuntimeException e) {
             System.err.println("Unchecked exception in mergeKLists(ListNode[] ) -> class Solution: " + e.getMessage());
@@ -50,13 +53,7 @@ class Solution {
             curr = curr.next;
         }
 
-        if (l1 != null) {
-            curr.next = l1;
-        }
-
-        if (l2 != null) {
-            curr.next = l2;
-        }
+        curr.next = (l1 == null) ? l2 : l1;
 
         return head.next;
     }
