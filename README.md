@@ -71,6 +71,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/Harsh-rm/LeetCode/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
+| [2868-continuous-subarrays](https://github.com/Harsh-rm/LeetCode/tree/master/2868-continuous-subarrays) |
 ## Backtracking
 |  |
 | ------- |
@@ -141,6 +142,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [1034-subarrays-with-k-different-integers](https://github.com/Harsh-rm/LeetCode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/Harsh-rm/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
+| [2868-continuous-subarrays](https://github.com/Harsh-rm/LeetCode/tree/master/2868-continuous-subarrays) |
 ## Linked List
 |  |
 | ------- |
@@ -176,6 +178,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0506-relative-ranks](https://github.com/Harsh-rm/LeetCode/tree/master/0506-relative-ranks) |
 | [0948-sort-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0948-sort-an-array) |
+| [2868-continuous-subarrays](https://github.com/Harsh-rm/LeetCode/tree/master/2868-continuous-subarrays) |
 ## Merge Sort
 |  |
 | ------- |
@@ -434,6 +437,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0232-implement-queue-using-stacks](https://github.com/Harsh-rm/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0341-flatten-nested-list-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0379-design-phone-directory](https://github.com/Harsh-rm/LeetCode/tree/master/0379-design-phone-directory) |
+| [2868-continuous-subarrays](https://github.com/Harsh-rm/LeetCode/tree/master/2868-continuous-subarrays) |
 ## Hash Function
 |  |
 | ------- |
@@ -502,4 +506,12 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0359-logger-rate-limiter](https://github.com/Harsh-rm/LeetCode/tree/master/0359-logger-rate-limiter) |
+## Ordered Set
+|  |
+| ------- |
+| [2868-continuous-subarrays](https://github.com/Harsh-rm/LeetCode/tree/master/2868-continuous-subarrays) |
+## Monotonic Queue
+|  |
+| ------- |
+| [2868-continuous-subarrays](https://github.com/Harsh-rm/LeetCode/tree/master/2868-continuous-subarrays) |
 <!---LeetCode Topics End-->
