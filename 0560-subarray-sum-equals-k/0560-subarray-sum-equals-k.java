@@ -1,24 +1,28 @@
 class Solution {
+
+    private Integer n, rSum, result;
+    private Map<Integer, Integer> freqMap;
+
     public int subarraySum(int[] nums, int k) {
-        if (nums == null || nums.length == 0) return 0;
+        this.result = 0;
+        if (nums == null || nums.length == 0) return result;
 
-        int count = 0;
-        int rSum = 0;
-        HashMap<Integer, Integer> rSumMap = new HashMap<>();
+        this.n = nums.length;
+        this.rSum = 0;
+        this.freqMap = new HashMap<>();
 
-        rSumMap.put(rSum, 1);
- 
+        freqMap.put(0, 1);
 
-        for (int i = 0; i < nums.length; i++) {
+        for(int i = 0; i < n; i++) {
             rSum += nums[i];
 
-            if (rSumMap.containsKey(rSum - k)) {
-                count += rSumMap.get(rSum - k);
+            if (freqMap.containsKey(rSum - k)) {
+                result += freqMap.get(rSum - k);
             }
 
-            rSumMap.put(rSum, rSumMap.getOrDefault(rSum, 0) + 1);
+            freqMap.put(rSum, freqMap.getOrDefault(rSum, 0) + 1);
         }
 
-        return count;
+        return result;
     }
 }
