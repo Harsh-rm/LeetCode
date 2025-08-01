@@ -125,6 +125,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0131-palindrome-partitioning](https://github.com/Harsh-rm/LeetCode/tree/master/0131-palindrome-partitioning) |
 | [0205-isomorphic-strings](https://github.com/Harsh-rm/LeetCode/tree/master/0205-isomorphic-strings) |
 | [0208-implement-trie-prefix-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0208-implement-trie-prefix-tree) |
+| [0227-basic-calculator-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0227-basic-calculator-ii) |
 | [0282-expression-add-operators](https://github.com/Harsh-rm/LeetCode/tree/master/0282-expression-add-operators) |
 | [0290-word-pattern](https://github.com/Harsh-rm/LeetCode/tree/master/0290-word-pattern) |
 | [0394-decode-string](https://github.com/Harsh-rm/LeetCode/tree/master/0394-decode-string) |
@@ -362,6 +363,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0143-reorder-list](https://github.com/Harsh-rm/LeetCode/tree/master/0143-reorder-list) |
 | [0155-min-stack](https://github.com/Harsh-rm/LeetCode/tree/master/0155-min-stack) |
 | [0173-binary-search-tree-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0173-binary-search-tree-iterator) |
+| [0227-basic-calculator-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0227-basic-calculator-ii) |
 | [0232-implement-queue-using-stacks](https://github.com/Harsh-rm/LeetCode/tree/master/0232-implement-queue-using-stacks) |
 | [0234-palindrome-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0234-palindrome-linked-list) |
 | [0341-flatten-nested-list-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
@@ -386,6 +388,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [0189-rotate-array](https://github.com/Harsh-rm/LeetCode/tree/master/0189-rotate-array) |
+| [0227-basic-calculator-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0227-basic-calculator-ii) |
 | [0268-missing-number](https://github.com/Harsh-rm/LeetCode/tree/master/0268-missing-number) |
 | [0282-expression-add-operators](https://github.com/Harsh-rm/LeetCode/tree/master/0282-expression-add-operators) |
 | [0412-fizz-buzz](https://github.com/Harsh-rm/LeetCode/tree/master/0412-fizz-buzz) |
