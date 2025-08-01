@@ -1,39 +1,45 @@
 class Solution {
 
-    private int n, result;
+    private int result, n, currNum;
+    private Stack<Integer> calcStack;
+    private char operator;
 
     public int calculate(String s) {
-        this.result = Integer.MIN_VALUE;
+        this.result = 0;
+
         if (s == null || s.length() == 0) return result;
 
         s = s.trim();
         this.n = s.length();
-        int calc = 0;
-        int num = 0;
-        int tail = 0;
-        char sign = '+';
-
+        this.calcStack = new Stack<>();
+        this.currNum = 0;
+        this.operator = '+';
+        
         for (int i = 0; i < n; i++) {
             char ch = s.charAt(i);
 
             if (Character.isDigit(ch)) {
-                num = num * 10 + ch - '0';
+                currNum = currNum * 10 + ch - '0';
             }
             if ((!Character.isDigit(ch) && ch != ' ') || (i == n - 1)) {
-                if (sign == '+' || sign == '-') {
-                    calc = (sign == '+') ? calc + num : calc - num;
-                    tail = (sign == '-') ? -num : num;
+                if (operator == '*' || operator == '/') {
+                    int temp = calcStack.pop();
+                    temp = (operator == '*') ? temp * currNum : temp / currNum;
+                    calcStack.push(temp);
                 }
-                else if (sign == '*' || sign == '/') {
-                    calc = (sign == '*') ? calc - tail + tail * num : calc - tail + tail / num;
-                    tail = (sign == '*') ? tail * num : tail / num;
+                else if (operator == '+' || operator == '-') {
+                    int temp = (operator == '-') ? -currNum : currNum;
+                    calcStack.push(temp);
                 }
-                num = 0;
-                sign = ch;
+                
+                currNum = 0;
+                operator = ch;
             }
         }
 
-        result = calc;
+        while (!calcStack.isEmpty()) {
+            result += calcStack.pop();
+        }
 
         return result;
     }
