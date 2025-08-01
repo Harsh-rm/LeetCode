@@ -67,6 +67,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [1025-minimum-cost-for-tickets](https://github.com/Harsh-rm/LeetCode/tree/master/1025-minimum-cost-for-tickets) |
 | [1034-subarrays-with-k-different-integers](https://github.com/Harsh-rm/LeetCode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
+| [1039-find-the-town-judge](https://github.com/Harsh-rm/LeetCode/tree/master/1039-find-the-town-judge) |
 | [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
 | [1414-shortest-path-in-a-grid-with-obstacles-elimination](https://github.com/Harsh-rm/LeetCode/tree/master/1414-shortest-path-in-a-grid-with-obstacles-elimination) |
 | [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
@@ -113,6 +114,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 | [1034-subarrays-with-k-different-integers](https://github.com/Harsh-rm/LeetCode/tree/master/1034-subarrays-with-k-different-integers) |
+| [1039-find-the-town-judge](https://github.com/Harsh-rm/LeetCode/tree/master/1039-find-the-town-judge) |
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/Harsh-rm/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
 ## String
@@ -467,6 +469,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | ------- |
 | [0207-course-schedule](https://github.com/Harsh-rm/LeetCode/tree/master/0207-course-schedule) |
 | [0210-course-schedule-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0210-course-schedule-ii) |
+| [1039-find-the-town-judge](https://github.com/Harsh-rm/LeetCode/tree/master/1039-find-the-town-judge) |
 ## Topological Sort
 |  |
 | ------- |
