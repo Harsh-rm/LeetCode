@@ -73,6 +73,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [1876-map-of-highest-peak](https://github.com/Harsh-rm/LeetCode/tree/master/1876-map-of-highest-peak) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
 | [2868-continuous-subarrays](https://github.com/Harsh-rm/LeetCode/tree/master/2868-continuous-subarrays) |
+| [3362-find-the-median-of-the-uniqueness-array](https://github.com/Harsh-rm/LeetCode/tree/master/3362-find-the-median-of-the-uniqueness-array) |
 ## Backtracking
 |  |
 | ------- |
@@ -117,6 +118,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [1039-find-the-town-judge](https://github.com/Harsh-rm/LeetCode/tree/master/1039-find-the-town-judge) |
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/Harsh-rm/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
 | [2448-count-number-of-bad-pairs](https://github.com/Harsh-rm/LeetCode/tree/master/2448-count-number-of-bad-pairs) |
+| [3362-find-the-median-of-the-uniqueness-array](https://github.com/Harsh-rm/LeetCode/tree/master/3362-find-the-median-of-the-uniqueness-array) |
 ## String
 |  |
 | ------- |
@@ -148,6 +150,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
 | [1423-maximum-number-of-occurrences-of-a-substring](https://github.com/Harsh-rm/LeetCode/tree/master/1423-maximum-number-of-occurrences-of-a-substring) |
 | [2868-continuous-subarrays](https://github.com/Harsh-rm/LeetCode/tree/master/2868-continuous-subarrays) |
+| [3362-find-the-median-of-the-uniqueness-array](https://github.com/Harsh-rm/LeetCode/tree/master/3362-find-the-median-of-the-uniqueness-array) |
 ## Linked List
 |  |
 | ------- |
@@ -204,6 +207,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0532-k-diff-pairs-in-an-array) |
 | [1046-max-consecutive-ones-iii](https://github.com/Harsh-rm/LeetCode/tree/master/1046-max-consecutive-ones-iii) |
+| [3362-find-the-median-of-the-uniqueness-array](https://github.com/Harsh-rm/LeetCode/tree/master/3362-find-the-median-of-the-uniqueness-array) |
 ## Matrix
 |  |
 | ------- |
