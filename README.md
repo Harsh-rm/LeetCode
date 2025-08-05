@@ -47,6 +47,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0322-coin-change](https://github.com/Harsh-rm/LeetCode/tree/master/0322-coin-change) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
 | [0379-design-phone-directory](https://github.com/Harsh-rm/LeetCode/tree/master/0379-design-phone-directory) |
+| [0419-battleships-in-a-board](https://github.com/Harsh-rm/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [0506-relative-ranks](https://github.com/Harsh-rm/LeetCode/tree/master/0506-relative-ranks) |
 | [0518-coin-change-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0518-coin-change-ii) |
 | [0525-contiguous-array](https://github.com/Harsh-rm/LeetCode/tree/master/0525-contiguous-array) |
@@ -219,6 +220,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0200-number-of-islands](https://github.com/Harsh-rm/LeetCode/tree/master/0200-number-of-islands) |
 | [0240-search-a-2d-matrix-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0240-search-a-2d-matrix-ii) |
 | [0378-kth-smallest-element-in-a-sorted-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0378-kth-smallest-element-in-a-sorted-matrix) |
+| [0419-battleships-in-a-board](https://github.com/Harsh-rm/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [0542-01-matrix](https://github.com/Harsh-rm/LeetCode/tree/master/0542-01-matrix) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [0967-minimum-falling-path-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0967-minimum-falling-path-sum) |
@@ -303,6 +305,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0341-flatten-nested-list-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0366-find-leaves-of-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0366-find-leaves-of-binary-tree) |
+| [0419-battleships-in-a-board](https://github.com/Harsh-rm/LeetCode/tree/master/0419-battleships-in-a-board) |
 | [0572-subtree-of-another-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0572-subtree-of-another-tree) |
 | [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
