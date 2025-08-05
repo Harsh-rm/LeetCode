@@ -280,6 +280,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0341-flatten-nested-list-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0366-find-leaves-of-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0366-find-leaves-of-binary-tree) |
+| [0572-subtree-of-another-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0572-subtree-of-another-tree) |
 | [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/Harsh-rm/LeetCode/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
@@ -300,6 +301,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0341-flatten-nested-list-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0366-find-leaves-of-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0366-find-leaves-of-binary-tree) |
+| [0572-subtree-of-another-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0572-subtree-of-another-tree) |
 | [0690-employee-importance](https://github.com/Harsh-rm/LeetCode/tree/master/0690-employee-importance) |
 | [0733-flood-fill](https://github.com/Harsh-rm/LeetCode/tree/master/0733-flood-fill) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
@@ -324,6 +326,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0199-binary-tree-right-side-view](https://github.com/Harsh-rm/LeetCode/tree/master/0199-binary-tree-right-side-view) |
 | [0236-lowest-common-ancestor-of-a-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0236-lowest-common-ancestor-of-a-binary-tree) |
 | [0366-find-leaves-of-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0366-find-leaves-of-binary-tree) |
+| [0572-subtree-of-another-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0572-subtree-of-another-tree) |
 | [1035-cousins-in-binary-tree](https://github.com/Harsh-rm/LeetCode/tree/master/1035-cousins-in-binary-tree) |
 | [2217-step-by-step-directions-from-a-binary-tree-node-to-another](https://github.com/Harsh-rm/LeetCode/tree/master/2217-step-by-step-directions-from-a-binary-tree-node-to-another) |
 ## Breadth-First Search
@@ -454,6 +457,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 ## Hash Function
 |  |
 | ------- |
+| [0572-subtree-of-another-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0572-subtree-of-another-tree) |
 | [0816-design-hashset](https://github.com/Harsh-rm/LeetCode/tree/master/0816-design-hashset) |
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 ## Simulation
@@ -529,4 +533,8 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 |  |
 | ------- |
 | [2868-continuous-subarrays](https://github.com/Harsh-rm/LeetCode/tree/master/2868-continuous-subarrays) |
+## String Matching
+|  |
+| ------- |
+| [0572-subtree-of-another-tree](https://github.com/Harsh-rm/LeetCode/tree/master/0572-subtree-of-another-tree) |
 <!---LeetCode Topics End-->
