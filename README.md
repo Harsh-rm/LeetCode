@@ -64,6 +64,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0817-design-hashmap](https://github.com/Harsh-rm/LeetCode/tree/master/0817-design-hashmap) |
 | [0948-sort-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0948-sort-an-array) |
 | [0967-minimum-falling-path-sum](https://github.com/Harsh-rm/LeetCode/tree/master/0967-minimum-falling-path-sum) |
+| [1002-maximum-width-ramp](https://github.com/Harsh-rm/LeetCode/tree/master/1002-maximum-width-ramp) |
 | [1025-minimum-cost-for-tickets](https://github.com/Harsh-rm/LeetCode/tree/master/1025-minimum-cost-for-tickets) |
 | [1034-subarrays-with-k-different-integers](https://github.com/Harsh-rm/LeetCode/tree/master/1034-subarrays-with-k-different-integers) |
 | [1036-rotting-oranges](https://github.com/Harsh-rm/LeetCode/tree/master/1036-rotting-oranges) |
@@ -264,6 +265,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0234-palindrome-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0234-palindrome-linked-list) |
 | [0253-meeting-rooms-ii](https://github.com/Harsh-rm/LeetCode/tree/master/0253-meeting-rooms-ii) |
 | [0532-k-diff-pairs-in-an-array](https://github.com/Harsh-rm/LeetCode/tree/master/0532-k-diff-pairs-in-an-array) |
+| [1002-maximum-width-ramp](https://github.com/Harsh-rm/LeetCode/tree/master/1002-maximum-width-ramp) |
 ## Tree
 |  |
 | ------- |
@@ -381,11 +383,13 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 | [0341-flatten-nested-list-iterator](https://github.com/Harsh-rm/LeetCode/tree/master/0341-flatten-nested-list-iterator) |
 | [0394-decode-string](https://github.com/Harsh-rm/LeetCode/tree/master/0394-decode-string) |
 | [0739-daily-temperatures](https://github.com/Harsh-rm/LeetCode/tree/master/0739-daily-temperatures) |
+| [1002-maximum-width-ramp](https://github.com/Harsh-rm/LeetCode/tree/master/1002-maximum-width-ramp) |
 ## Monotonic Stack
 |  |
 | ------- |
 | [0042-trapping-rain-water](https://github.com/Harsh-rm/LeetCode/tree/master/0042-trapping-rain-water) |
 | [0739-daily-temperatures](https://github.com/Harsh-rm/LeetCode/tree/master/0739-daily-temperatures) |
+| [1002-maximum-width-ramp](https://github.com/Harsh-rm/LeetCode/tree/master/1002-maximum-width-ramp) |
 ## Greedy
 |  |
 | ------- |
