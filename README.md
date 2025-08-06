@@ -156,6 +156,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 ## Linked List
 |  |
 | ------- |
+| [0021-merge-two-sorted-lists](https://github.com/Harsh-rm/LeetCode/tree/master/0021-merge-two-sorted-lists) |
 | [0023-merge-k-sorted-lists](https://github.com/Harsh-rm/LeetCode/tree/master/0023-merge-k-sorted-lists) |
 | [0114-flatten-binary-tree-to-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0114-flatten-binary-tree-to-linked-list) |
 | [0138-copy-list-with-random-pointer](https://github.com/Harsh-rm/LeetCode/tree/master/0138-copy-list-with-random-pointer) |
@@ -474,6 +475,7 @@ Collection of LeetCode questions to ace the coding interview! - Pushed into the 
 ## Recursion
 |  |
 | ------- |
+| [0021-merge-two-sorted-lists](https://github.com/Harsh-rm/LeetCode/tree/master/0021-merge-two-sorted-lists) |
 | [0143-reorder-list](https://github.com/Harsh-rm/LeetCode/tree/master/0143-reorder-list) |
 | [0206-reverse-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0206-reverse-linked-list) |
 | [0234-palindrome-linked-list](https://github.com/Harsh-rm/LeetCode/tree/master/0234-palindrome-linked-list) |
